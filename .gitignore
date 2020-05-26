@@ -1,0 +1,6 @@
+*.cache
+*.runs
+*.sim
+*.tmp
+*.ip_user_files
+backup

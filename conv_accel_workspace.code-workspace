@@ -1,0 +1,10 @@
+{
+  "folders": [
+    {
+      "path": "conv_accel"
+    }
+  ],
+  "settings": {
+    "verilog.linting.iverilog.arguments": "-g 2012  -y /home/ppeetteerrs/Desktop/Projects/FPGA/conv_accel/"
+  }
+}
