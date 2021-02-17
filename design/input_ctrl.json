@@ -1,0 +1,56 @@
+{
+	"signal": [
+		{
+			"name": "clk",
+			"wave": "P......."
+		},
+		[
+			"IDLE => SET_KERNEL",
+			{
+				"name": "state",
+				"wave": "=.=x..",
+				"data": ["IDLE", "SET_KERNEL"]
+			},
+
+			{
+				"name": "kernel_valid",
+				"wave": "01x..."
+			},
+			{
+				"name": "kernel_ready",
+				"wave": "01x...",
+				"phase": -0.1
+			},
+			{
+				"name": "next_state",
+				"wave": "x=",
+				"data": ["SET_KERNEL"],
+				"phase": -0.2
+			}
+		],
+		{
+			"name": "clk0",
+			"wave": "phnlPHNL"
+		},
+		{
+			"name": "clk1",
+			"wave": "xhlhLHl."
+		},
+		{
+			"name": "clk2",
+			"wave": "hpHplnLn"
+		},
+		{
+			"name": "clk3",
+			"wave": "nhNhplPl"
+		},
+		{
+			"name": "clk4",
+			"wave": "xlh.L.Hx"
+		}
+	],
+	"edge": ["a~b t1"],
+	"config": {
+		"hscale": 3
+	}
+}

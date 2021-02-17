@@ -1,46 +1,61 @@
 #-----------------------------------------------------------
-# Vivado v2019.2 (64-bit)
-# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
-# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Sat May 23 19:20:09 2020
-# Process ID: 8444
-# Current directory: C:/Users/Peter/Desktop/Projects/FPGA/pynq
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8464 C:\Users\Peter\Desktop\Projects\FPGA\pynq\pynq.xpr
-# Log file: C:/Users/Peter/Desktop/Projects/FPGA/pynq/vivado.log
-# Journal file: C:/Users/Peter/Desktop/Projects/FPGA/pynq\vivado.jou
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Wed Feb 17 19:15:11 2021
+# Process ID: 832
+# Current directory: C:/Users/peter/Desktop/Projects/FPGA/fl_accel/vivado/pynq
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent23664 C:\Users\peter\Desktop\Projects\FPGA\fl_accel\vivado\pynq\pynq.xpr
+# Log file: C:/Users/peter/Desktop/Projects/FPGA/fl_accel/vivado/pynq/vivado.log
+# Journal file: C:/Users/peter/Desktop/Projects/FPGA/fl_accel/vivado/pynq\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.xpr
+open_project C:/Users/peter/Desktop/Projects/FPGA/fl_accel/vivado/pynq/pynq.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/Peter/Desktop/Projects/FPGA/vivado/pynq' since last save.
 Scanning sources...
 Finished scanning sources
-WARNING: [filemgmt 56-3] IP Repository Path: Could not find the directory 'C:/Users/Peter/Desktop/Projects/FPGA/ip_repo/conv_accel'.
+WARNING: [filemgmt 56-2] Board Part Repository Path: Could not find the directory 'C:/Users/peter/Desktop/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store', nor could it be found using path 'C:/Users/Peter/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store'.
+WARNING: [filemgmt 56-2] IP Repository Path: Could not find the directory 'C:/Users/peter/Desktop/Projects/FPGA/fl_accel/vivado/accel', nor could it be found using path 'C:/Users/Peter/Desktop/Projects/FPGA/vivado/accel'.
+CRITICAL WARNING: [Board 49-67] The board_part definition was not found for digilentinc.com:arty-z7-20:part0:1.0. This can happen sometimes when you use custom board part. You can resolve this issue by setting 'board.repoPaths' parameter, pointing to the location of custom board files. Valid board_part values can be retrieved with the 'get_board_parts' Tcl command.
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/Peter/Desktop/Projects/FPGA/ip_repo/conv_accel'; Can't find the specified path.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/peter/Desktop/Projects/FPGA/fl_accel/vivado/accel'; Can't find the specified path.
 If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'.
-WARNING: [IP_Flow 19-3664] IP 'main_conv_accel_0_0' generated file not found 'c:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/main/ip/main_conv_accel_0_0/main_conv_accel_0_0.dcp'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'main_conv_accel_0_0' generated file not found 'c:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/main/ip/main_conv_accel_0_0/main_conv_accel_0_0_stub.v'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'main_conv_accel_0_0' generated file not found 'c:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/main/ip/main_conv_accel_0_0/main_conv_accel_0_0_stub.vhdl'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'main_conv_accel_0_0' generated file not found 'c:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/main/ip/main_conv_accel_0_0/main_conv_accel_0_0_sim_netlist.v'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'main_conv_accel_0_0' generated file not found 'c:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/main/ip/main_conv_accel_0_0/main_conv_accel_0_0_sim_netlist.vhdl'. Please regenerate to continue.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.1/data/ip'.
+WARNING: [BD 41-1661] One or more IPs have been locked in the design 'float.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
+List of locked IPs:
+float_axi_dma_0_0
+float_ps7_0_axi_periph_0
+float_xbar_0
+float_processing_system7_0_0
+float_axi_mem_intercon_0
+float_xbar_1
+float_rst_ps7_0_100M_0
+float_auto_us_0
+float_floating_point_0_0
+float_axi_dma_1_0
+float_auto_us_1
+float_floating_point_0_1
+float_auto_pc_0
+float_auto_pc_1
+
 WARNING: [BD 41-1661] One or more IPs have been locked in the design 'main.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
 List of locked IPs:
-main_conv_accel_0_0
+main_axi_mem_intercon_0
+main_processing_system7_0_0
+main_conv_accel_0_2
+main_axi_dma_0_0
+main_ps7_0_axi_periph_0
+main_xbar_0
+main_rst_ps7_0_100M_0
+main_xbar_1
+main_auto_pc_0
+main_auto_us_0
+main_auto_pc_1
 
-open_project: Time (s): cpu = 00:00:22 ; elapsed = 00:00:15 . Memory (MB): peak = 952.180 ; gain = 320.832
+INFO: [Project 1-230] Project 'pynq.xpr' upgraded for this version of Vivado.
+open_project: Time (s): cpu = 00:00:22 ; elapsed = 00:00:13 . Memory (MB): peak = 1147.270 ; gain = 72.855
 update_compile_order -fileset sources_1
-set_property  ip_repo_paths  {} [current_project]
-update_ip_catalog
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-set_property  ip_repo_paths  C:/Users/Peter/Desktop/Projects/FPGA/accel [current_project]
-update_ip_catalog
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Peter/Desktop/Projects/FPGA/accel'.
-update_ip_catalog -rebuild
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Peter/Desktop/Projects/FPGA/accel'.
-open_bd_design {C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/main/main.bd}
+open_bd_design {C:/Users/peter/Desktop/Projects/FPGA/fl_accel/vivado/pynq/pynq.srcs/sources_1/bd/main/main.bd}
 Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
 WARNING: [BD 41-176] The physical port 'S_AXI_GP2_rd_socket' specified in the portmap, is not found on the block! 
 WARNING: [BD 41-176] The physical port 'S_AXI_GP2_wr_socket' specified in the portmap, is not found on the block! 
@@ -56,600 +71,7 @@ Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - xlconcat_0
 Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - axi_mem_intercon
 Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
 Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
-Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
 Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
-Adding component instance block -- user.org:user:conv_accel:1.0 - conv_accel_0
+Adding component instance block -- peteryuen:fl:conv_accel:1.0 - conv_accel_0
 WARNING: [BD 41-1731] Type mismatch between connected pins: /axi_intc_0/irq(undef) and /processing_system7_0/IRQ_F2P(intr)
-Successfully read diagram <main> from BD file <C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/main/main.bd>
-open_bd_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 1498.465 ; gain = 21.824
-delete_bd_objs [get_bd_nets conv_accel_0_s00_axis_input_tready] [get_bd_nets conv_accel_0_m00_axis_output_tvalid] [get_bd_nets conv_accel_0_m00_axis_output_tdata] [get_bd_nets conv_accel_0_m00_axis_output_tstrb] [get_bd_intf_nets axi_dma_0_M_AXIS_MM2S] [get_bd_intf_nets conv_accel_0_M00_AXIS_output] [get_bd_nets axi_dma_0_m_axis_mm2s_tdata] [get_bd_nets axi_dma_0_m_axis_mm2s_tkeep] [get_bd_nets axi_dma_0_m_axis_mm2s_tlast] [get_bd_nets axi_dma_0_m_axis_mm2s_tvalid] [get_bd_nets conv_accel_0_m00_axis_output_tlast] [get_bd_nets axi_dma_0_s_axis_s2mm_tready] [get_bd_cells conv_accel_0]
-startgroup
-create_bd_cell -type ip -vlnv peteryuen:fl:conv_accel:1.0 conv_accel_0
-endgroup
-connect_bd_intf_net [get_bd_intf_pins conv_accel_0/AXIS_MST] [get_bd_intf_pins axi_dma_0/S_AXIS_S2MM]
-connect_bd_intf_net [get_bd_intf_pins conv_accel_0/AXIS_SLV] [get_bd_intf_pins axi_dma_0/M_AXIS_MM2S]
-undo
-INFO: [Common 17-17] undo 'connect_bd_intf_net [get_bd_intf_pins conv_accel_0/AXIS_SLV] [get_bd_intf_pins axi_dma_0/M_AXIS_MM2S]'
-undo
-INFO: [Common 17-17] undo 'connect_bd_intf_net [get_bd_intf_pins conv_accel_0/AXIS_MST] [get_bd_intf_pins axi_dma_0/S_AXIS_S2MM]'
-undo
-INFO: [Common 17-17] undo 'endgroup'
-INFO: [Common 17-17] undo 'create_bd_cell -type ip -vlnv peteryuen:fl:conv_accel:1.0 conv_accel_0'
-INFO: [Common 17-17] undo 'startgroup'
-undo
-INFO: [Common 17-17] undo 'delete_bd_objs [get_bd_nets conv_accel_0_s00_axis_input_tready] [get_bd_nets conv_accel_0_m00_axis_output_tvalid] [get_bd_nets conv_accel_0_m00_axis_output_tdata] [get_bd_nets conv_accel_0_m00_axis_output_tstrb] [get_bd_intf_nets axi_dma_0_M_AXIS_MM2S] [get_bd_intf_nets conv_accel_0_M00_AXIS_output] [get_bd_nets axi_dma_0_m_axis_mm2s_tdata] [get_bd_nets axi_dma_0_m_axis_mm2s_tkeep] [get_bd_nets axi_dma_0_m_axis_mm2s_tlast] [get_bd_nets axi_dma_0_m_axis_mm2s_tvalid] [get_bd_nets conv_accel_0_m00_axis_output_tlast] [get_bd_nets axi_dma_0_s_axis_s2mm_tready] [get_bd_cells conv_accel_0]'
-delete_bd_objs [get_bd_nets conv_accel_0_s00_axis_input_tready] [get_bd_nets conv_accel_0_m00_axis_output_tvalid] [get_bd_nets conv_accel_0_m00_axis_output_tdata] [get_bd_nets conv_accel_0_m00_axis_output_tstrb] [get_bd_intf_nets axi_dma_0_M_AXIS_MM2S] [get_bd_intf_nets conv_accel_0_M00_AXIS_output] [get_bd_nets axi_dma_0_m_axis_mm2s_tdata] [get_bd_nets axi_dma_0_m_axis_mm2s_tkeep] [get_bd_nets axi_dma_0_m_axis_mm2s_tlast] [get_bd_nets axi_dma_0_m_axis_mm2s_tvalid] [get_bd_nets conv_accel_0_m00_axis_output_tlast] [get_bd_nets axi_dma_0_s_axis_s2mm_tready] [get_bd_cells conv_accel_0]
-startgroup
-create_bd_cell -type ip -vlnv peteryuen:fl:conv_accel:1.0 conv_accel_0
-endgroup
-connect_bd_intf_net [get_bd_intf_pins conv_accel_0/AXIS_MST] [get_bd_intf_pins axi_dma_0/S_AXIS_S2MM]
-connect_bd_intf_net [get_bd_intf_pins conv_accel_0/AXIS_SLV] [get_bd_intf_pins axi_dma_0/M_AXIS_MM2S]
-startgroup
-set_property -dict [list CONFIG.c_s_axis_s2mm_tdata_width.VALUE_SRC USER] [get_bd_cells axi_dma_0]
-set_property -dict [list CONFIG.c_s_axis_s2mm_tdata_width {64}] [get_bd_cells axi_dma_0]
-endgroup
-startgroup
-set_property -dict [list CONFIG.c_s_axis_s2mm_tdata_width.VALUE_SRC PROPAGATED CONFIG.c_single_interface.VALUE_SRC USER] [get_bd_cells axi_dma_0]
-set_property -dict [list CONFIG.c_m_axi_mm2s_data_width {64} CONFIG.c_m_axis_mm2s_tdata_width {64} CONFIG.c_mm2s_burst_size {256} CONFIG.c_single_interface {0}] [get_bd_cells axi_dma_0]
-endgroup
-connect_bd_net [get_bd_pins conv_accel_0/mst_data] [get_bd_pins axi_dma_0/s_axis_s2mm_tdata]
-WARNING: [BD 41-1306] The connection to interface pin /conv_accel_0/mst_data is being overridden by the user. This pin will not be connected as a part of interface connection AXIS_MST
-WARNING: [BD 41-1306] The connection to interface pin /axi_dma_0/s_axis_s2mm_tdata is being overridden by the user. This pin will not be connected as a part of interface connection S_AXIS_S2MM
-startgroup
-set_property -dict [list CONFIG.c_s_axis_s2mm_tdata_width.VALUE_SRC USER] [get_bd_cells axi_dma_0]
-set_property -dict [list CONFIG.c_s_axis_s2mm_tdata_width {32}] [get_bd_cells axi_dma_0]
-endgroup
-connect_bd_net [get_bd_pins conv_accel_0/mst_last] [get_bd_pins axi_dma_0/s_axis_s2mm_tlast]
-WARNING: [BD 41-1306] The connection to interface pin /conv_accel_0/mst_last is being overridden by the user. This pin will not be connected as a part of interface connection AXIS_MST
-WARNING: [BD 41-1306] The connection to interface pin /axi_dma_0/s_axis_s2mm_tlast is being overridden by the user. This pin will not be connected as a part of interface connection S_AXIS_S2MM
-connect_bd_net [get_bd_pins conv_accel_0/mst_valid] [get_bd_pins axi_dma_0/s_axis_s2mm_tvalid]
-WARNING: [BD 41-1306] The connection to interface pin /conv_accel_0/mst_valid is being overridden by the user. This pin will not be connected as a part of interface connection AXIS_MST
-WARNING: [BD 41-1306] The connection to interface pin /axi_dma_0/s_axis_s2mm_tvalid is being overridden by the user. This pin will not be connected as a part of interface connection S_AXIS_S2MM
-connect_bd_net [get_bd_pins conv_accel_0/mst_ready] [get_bd_pins axi_dma_0/s_axis_s2mm_tready]
-WARNING: [BD 41-1306] The connection to interface pin /conv_accel_0/mst_ready is being overridden by the user. This pin will not be connected as a part of interface connection AXIS_MST
-WARNING: [BD 41-1306] The connection to interface pin /axi_dma_0/s_axis_s2mm_tready is being overridden by the user. This pin will not be connected as a part of interface connection S_AXIS_S2MM
-connect_bd_net [get_bd_pins conv_accel_0/slv_valid] [get_bd_pins axi_dma_0/m_axis_mm2s_tready]
-WARNING: [BD 41-1306] The connection to interface pin /conv_accel_0/slv_valid is being overridden by the user. This pin will not be connected as a part of interface connection AXIS_SLV
-WARNING: [BD 41-1306] The connection to interface pin /axi_dma_0/m_axis_mm2s_tready is being overridden by the user. This pin will not be connected as a part of interface connection M_AXIS_MM2S
-connect_bd_net [get_bd_pins conv_accel_0/slv_last] [get_bd_pins axi_dma_0/m_axis_mm2s_tlast]
-WARNING: [BD 41-1306] The connection to interface pin /conv_accel_0/slv_last is being overridden by the user. This pin will not be connected as a part of interface connection AXIS_SLV
-WARNING: [BD 41-1306] The connection to interface pin /axi_dma_0/m_axis_mm2s_tlast is being overridden by the user. This pin will not be connected as a part of interface connection M_AXIS_MM2S
-connect_bd_net [get_bd_pins conv_accel_0/slv_data] [get_bd_pins axi_dma_0/m_axis_mm2s_tdata]
-WARNING: [BD 41-1306] The connection to interface pin /conv_accel_0/slv_data is being overridden by the user. This pin will not be connected as a part of interface connection AXIS_SLV
-WARNING: [BD 41-1306] The connection to interface pin /axi_dma_0/m_axis_mm2s_tdata is being overridden by the user. This pin will not be connected as a part of interface connection M_AXIS_MM2S
-connect_bd_net [get_bd_pins conv_accel_0/slv_ready] [get_bd_pins axi_dma_0/m_axis_mm2s_tready]
-WARNING: [BD 41-1306] The connection to interface pin /conv_accel_0/slv_ready is being overridden by the user. This pin will not be connected as a part of interface connection AXIS_SLV
-connect_bd_net [get_bd_pins conv_accel_0/clk] [get_bd_pins processing_system7_0/FCLK_CLK0]
-connect_bd_net [get_bd_pins conv_accel_0/aresetn] [get_bd_pins rst_ps7_0_100M/peripheral_aresetn]
-regenerate_bd_layout
-save_bd_design
-Wrote  : <C:\Users\Peter\Desktop\Projects\FPGA\pynq\pynq.srcs\sources_1\bd\main\main.bd> 
-Wrote  : <C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/main/ui/bd_791abab9.ui> 
-reset_run main_axi_dma_0_0_synth_1
-reset_run synth_1
-launch_runs synth_1 -jobs 4
-WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_M_AXI_GP0_FREQMHZ(10) on '/processing_system7_0' with propagated value(100). Command ignored
-WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_S_AXI_HP0_FREQMHZ(10) on '/processing_system7_0' with propagated value(100). Command ignored
-WARNING: [xilinx.com:ip:axi_intc:4.1-13] /axi_intc_0: Interrupt output connection Bus is selected, but the interrupt bus interface is not connected to a matching interface. Please consider selecting Single instead.
-WARNING: [BD 41-1271] The connection to the pin: /conv_accel_0/mst_data has been overridden by the user. This pin will not be connected as a part of the interface connection: conv_accel_0_AXIS_MST 
-WARNING: [BD 41-1271] The connection to the pin: /conv_accel_0/mst_valid has been overridden by the user. This pin will not be connected as a part of the interface connection: conv_accel_0_AXIS_MST 
-WARNING: [BD 41-1271] The connection to the pin: /conv_accel_0/mst_last has been overridden by the user. This pin will not be connected as a part of the interface connection: conv_accel_0_AXIS_MST 
-WARNING: [BD 41-1271] The connection to the pin: /axi_dma_0/s_axis_s2mm_tready has been overridden by the user. This pin will not be connected as a part of the interface connection: conv_accel_0_AXIS_MST 
-WARNING: [BD 41-1271] The connection to the pin: /axi_dma_0/m_axis_mm2s_tlast has been overridden by the user. This pin will not be connected as a part of the interface connection: axi_dma_0_M_AXIS_MM2S 
-WARNING: [BD 41-1271] The connection to the pin: /conv_accel_0/slv_valid has been overridden by the user. This pin will not be connected as a part of the interface connection: axi_dma_0_M_AXIS_MM2S 
-WARNING: [BD 41-1271] The connection to the pin: /axi_dma_0/m_axis_mm2s_tdata has been overridden by the user. This pin will not be connected as a part of the interface connection: axi_dma_0_M_AXIS_MM2S 
-WARNING: [BD 41-1271] The connection to the pin: /conv_accel_0/slv_ready has been overridden by the user. This pin will not be connected as a part of the interface connection: axi_dma_0_M_AXIS_MM2S 
-Wrote  : <C:\Users\Peter\Desktop\Projects\FPGA\pynq\pynq.srcs\sources_1\bd\main\main.bd> 
-Wrote  : <C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/main/ui/bd_791abab9.ui> 
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_rid'(1) to net 'auto_pc_to_m00_couplers_RID'(6) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_bid'(1) to net 'auto_pc_to_m00_couplers_BID'(6) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_AWID'(6) to net 'axi_mem_intercon_M00_AXI_AWID'(1) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_ARID'(6) to net 'axi_mem_intercon_M00_AXI_ARID'(1) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_WID'(6) to net 'axi_mem_intercon_M00_AXI_WID'(1) - Only lower order bits will be connected.
-VHDL Output written to : C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/main/synth/main.v
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_rid'(1) to net 'auto_pc_to_m00_couplers_RID'(6) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_bid'(1) to net 'auto_pc_to_m00_couplers_BID'(6) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_AWID'(6) to net 'axi_mem_intercon_M00_AXI_AWID'(1) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_ARID'(6) to net 'axi_mem_intercon_M00_AXI_ARID'(1) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_WID'(6) to net 'axi_mem_intercon_M00_AXI_WID'(1) - Only lower order bits will be connected.
-VHDL Output written to : C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/main/sim/main.v
-VHDL Output written to : C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/main/hdl/main_wrapper.v
-INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_dma_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_100M .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_intc_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/xbar .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block conv_accel_0 .
-WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/main/ip/main_auto_pc_0/main_auto_pc_0_ooc.xdc'
-INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
-WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/main/ip/main_auto_us_0/main_auto_us_0_ooc.xdc'
-INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s01_couplers/auto_us .
-WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/main/ip/main_auto_pc_1/main_auto_pc_1_ooc.xdc'
-INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/m00_couplers/auto_pc .
-Exporting to file C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/main/hw_handoff/main.hwh
-Generated Block Design Tcl file C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/main/hw_handoff/main_bd.tcl
-Generated Hardware Definition File C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/main/synth/main.hwdef
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP main_auto_pc_0, cache-ID = 9c6fd2f60aa25bc1; cache size = 19.574 MB.
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP main_auto_pc_1, cache-ID = 4746d210c7003bc9; cache size = 19.574 MB.
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP main_auto_us_0, cache-ID = 8d741099c6b7b707; cache size = 19.574 MB.
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP main_conv_accel_0_2, cache-ID = 72816d6aedd717ec; cache size = 2.445 MB.
-INFO: [IP_Flow 19-5642] Done with IP cache export for multiple IPs
-[Sat May 23 19:26:34 2020] Launched main_axi_dma_0_0_synth_1...
-Run output will be captured here: C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.runs/main_axi_dma_0_0_synth_1/runme.log
-[Sat May 23 19:26:34 2020] Launched synth_1...
-Run output will be captured here: C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.runs/synth_1/runme.log
-launch_runs: Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1547.648 ; gain = 49.184
-launch_runs impl_1 -jobs 4
-[Sat May 23 19:29:37 2020] Launched impl_1...
-Run output will be captured here: C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.runs/impl_1/runme.log
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-[Sat May 23 19:32:12 2020] Launched impl_1...
-Run output will be captured here: C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.runs/impl_1/runme.log
-write_hw_platform -fixed -force  -include_bit -file C:/Users/Peter/Downloads/main_wrapper.xsa
-INFO: [Vivado 12-4895] Creating Hardware Platform: C:/Users/Peter/Downloads/main_wrapper.xsa ...
-ERROR: [Common 17-1293] The path 'C:/Users/Peter/Downloads' already exists, is a directory, but is not writable.
-write_hw_platform -fixed -force  -include_bit -file C:/Users/Peter/Downloads/main_wrapper.xsa
-INFO: [Vivado 12-4895] Creating Hardware Platform: C:/Users/Peter/Downloads/main_wrapper.xsa ...
-ERROR: [Common 17-1293] The path 'C:/Users/Peter/Downloads' already exists, is a directory, but is not writable.
-write_hw_platform -fixed -force  -include_bit -file C:/Users/Peter/Downloads/export/main_wrapper.xsa
-INFO: [Vivado 12-4895] Creating Hardware Platform: C:/Users/Peter/Downloads/export/main_wrapper.xsa ...
-INFO: [Hsi 55-2053] elapsed time for repository (C:/Xilinx/Vivado/2019.2/data\embeddedsw) loading 0 seconds
-WARNING: [Project 1-645] Board images not set in Hardware Platform.
-INFO: [Vivado 12-4896] Successfully created Hardware Platform: C:/Users/Peter/Downloads/export/main_wrapper.xsa
-write_hw_platform: Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1602.484 ; gain = 54.836
-update_ip_catalog -rebuild -scan_changes
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Peter/Desktop/Projects/FPGA/accel'.
-report_ip_status -name ip_status
-upgrade_ip -vlnv peteryuen:fl:conv_accel:1.0 [get_ips  main_conv_accel_0_2] -log ip_upgrade.log
-Upgrading 'C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/main/main.bd'
-INFO: [IP_Flow 19-1972] Upgraded main_conv_accel_0_2 from conv_accel_v1_0 1.0 to conv_accel_v1_0 1.0
-Wrote  : <C:\Users\Peter\Desktop\Projects\FPGA\pynq\pynq.srcs\sources_1\bd\main\main.bd> 
-Wrote  : <C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/main/ui/bd_791abab9.ui> 
-INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/Peter/Desktop/Projects/FPGA/pynq/ip_upgrade.log'.
-export_ip_user_files -of_objects [get_ips main_conv_accel_0_2] -no_script -sync -force -quiet
-generate_target all [get_files  C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/main/main.bd]
-WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_M_AXI_GP0_FREQMHZ(10) on '/processing_system7_0' with propagated value(100). Command ignored
-WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_S_AXI_HP0_FREQMHZ(10) on '/processing_system7_0' with propagated value(100). Command ignored
-WARNING: [xilinx.com:ip:axi_intc:4.1-13] /axi_intc_0: Interrupt output connection Bus is selected, but the interrupt bus interface is not connected to a matching interface. Please consider selecting Single instead.
-WARNING: [BD 41-1271] The connection to the pin: /conv_accel_0/mst_data has been overridden by the user. This pin will not be connected as a part of the interface connection: conv_accel_0_AXIS_MST 
-WARNING: [BD 41-1271] The connection to the pin: /conv_accel_0/mst_valid has been overridden by the user. This pin will not be connected as a part of the interface connection: conv_accel_0_AXIS_MST 
-WARNING: [BD 41-1271] The connection to the pin: /conv_accel_0/mst_last has been overridden by the user. This pin will not be connected as a part of the interface connection: conv_accel_0_AXIS_MST 
-WARNING: [BD 41-1271] The connection to the pin: /axi_dma_0/s_axis_s2mm_tready has been overridden by the user. This pin will not be connected as a part of the interface connection: conv_accel_0_AXIS_MST 
-WARNING: [BD 41-1271] The connection to the pin: /axi_dma_0/m_axis_mm2s_tlast has been overridden by the user. This pin will not be connected as a part of the interface connection: axi_dma_0_M_AXIS_MM2S 
-WARNING: [BD 41-1271] The connection to the pin: /conv_accel_0/slv_valid has been overridden by the user. This pin will not be connected as a part of the interface connection: axi_dma_0_M_AXIS_MM2S 
-WARNING: [BD 41-1271] The connection to the pin: /axi_dma_0/m_axis_mm2s_tdata has been overridden by the user. This pin will not be connected as a part of the interface connection: axi_dma_0_M_AXIS_MM2S 
-WARNING: [BD 41-1271] The connection to the pin: /conv_accel_0/slv_ready has been overridden by the user. This pin will not be connected as a part of the interface connection: axi_dma_0_M_AXIS_MM2S 
-Wrote  : <C:\Users\Peter\Desktop\Projects\FPGA\pynq\pynq.srcs\sources_1\bd\main\main.bd> 
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_rid'(1) to net 'auto_pc_to_m00_couplers_RID'(6) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_bid'(1) to net 'auto_pc_to_m00_couplers_BID'(6) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_AWID'(6) to net 'axi_mem_intercon_M00_AXI_AWID'(1) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_ARID'(6) to net 'axi_mem_intercon_M00_AXI_ARID'(1) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_WID'(6) to net 'axi_mem_intercon_M00_AXI_WID'(1) - Only lower order bits will be connected.
-VHDL Output written to : C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/main/synth/main.v
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_rid'(1) to net 'auto_pc_to_m00_couplers_RID'(6) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_bid'(1) to net 'auto_pc_to_m00_couplers_BID'(6) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_AWID'(6) to net 'axi_mem_intercon_M00_AXI_AWID'(1) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_ARID'(6) to net 'axi_mem_intercon_M00_AXI_ARID'(1) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_WID'(6) to net 'axi_mem_intercon_M00_AXI_WID'(1) - Only lower order bits will be connected.
-VHDL Output written to : C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/main/sim/main.v
-VHDL Output written to : C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/main/hdl/main_wrapper.v
-INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_dma_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_100M .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_intc_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/xbar .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block conv_accel_0 .
-WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/main/ip/main_auto_pc_0/main_auto_pc_0_ooc.xdc'
-INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
-WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/main/ip/main_auto_us_0/main_auto_us_0_ooc.xdc'
-INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s01_couplers/auto_us .
-WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/main/ip/main_auto_pc_1/main_auto_pc_1_ooc.xdc'
-INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/m00_couplers/auto_pc .
-Exporting to file C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/main/hw_handoff/main.hwh
-Generated Block Design Tcl file C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/main/hw_handoff/main_bd.tcl
-Generated Hardware Definition File C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/main/synth/main.hwdef
-generate_target: Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 2769.953 ; gain = 0.000
-catch { config_ip_cache -export [get_ips -all main_conv_accel_0_2] }
-catch { config_ip_cache -export [get_ips -all main_auto_pc_0] }
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP main_auto_pc_0, cache-ID = 9c6fd2f60aa25bc1; cache size = 24.951 MB.
-catch { config_ip_cache -export [get_ips -all main_auto_us_0] }
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP main_auto_us_0, cache-ID = 8d741099c6b7b707; cache size = 24.951 MB.
-catch { config_ip_cache -export [get_ips -all main_auto_pc_1] }
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP main_auto_pc_1, cache-ID = 4746d210c7003bc9; cache size = 24.951 MB.
-export_ip_user_files -of_objects [get_files C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/main/main.bd] -no_script -sync -force -quiet
-create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/main/main.bd]
-launch_runs -jobs 8 main_conv_accel_0_2_synth_1
-[Sat May 23 22:05:17 2020] Launched main_conv_accel_0_2_synth_1...
-Run output will be captured here: C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.runs/main_conv_accel_0_2_synth_1/runme.log
-export_simulation -of_objects [get_files C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/main/main.bd] -directory C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.ip_user_files -ipstatic_source_dir C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.cache/compile_simlib/modelsim} {questa=C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.cache/compile_simlib/questa} {riviera=C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.cache/compile_simlib/riviera} {activehdl=C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
-update_ip_catalog -rebuild -scan_changes
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Peter/Desktop/Projects/FPGA/accel'.
-report_ip_status -name ip_status
-upgrade_ip -vlnv peteryuen:fl:conv_accel:1.0 [get_ips  main_conv_accel_0_2] -log ip_upgrade.log
-Upgrading 'C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/main/main.bd'
-INFO: [IP_Flow 19-1972] Upgraded main_conv_accel_0_2 from conv_accel_v1_0 1.0 to conv_accel_v1_0 1.0
-Wrote  : <C:\Users\Peter\Desktop\Projects\FPGA\pynq\pynq.srcs\sources_1\bd\main\main.bd> 
-Wrote  : <C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/main/ui/bd_791abab9.ui> 
-INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/Peter/Desktop/Projects/FPGA/pynq/ip_upgrade.log'.
-export_ip_user_files -of_objects [get_ips main_conv_accel_0_2] -no_script -sync -force -quiet
-generate_target all [get_files  C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/main/main.bd]
-WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_M_AXI_GP0_FREQMHZ(10) on '/processing_system7_0' with propagated value(100). Command ignored
-WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_S_AXI_HP0_FREQMHZ(10) on '/processing_system7_0' with propagated value(100). Command ignored
-WARNING: [xilinx.com:ip:axi_intc:4.1-13] /axi_intc_0: Interrupt output connection Bus is selected, but the interrupt bus interface is not connected to a matching interface. Please consider selecting Single instead.
-WARNING: [BD 41-1271] The connection to the pin: /conv_accel_0/mst_data has been overridden by the user. This pin will not be connected as a part of the interface connection: conv_accel_0_AXIS_MST 
-WARNING: [BD 41-1271] The connection to the pin: /conv_accel_0/mst_valid has been overridden by the user. This pin will not be connected as a part of the interface connection: conv_accel_0_AXIS_MST 
-WARNING: [BD 41-1271] The connection to the pin: /conv_accel_0/mst_last has been overridden by the user. This pin will not be connected as a part of the interface connection: conv_accel_0_AXIS_MST 
-WARNING: [BD 41-1271] The connection to the pin: /axi_dma_0/s_axis_s2mm_tready has been overridden by the user. This pin will not be connected as a part of the interface connection: conv_accel_0_AXIS_MST 
-WARNING: [BD 41-1271] The connection to the pin: /axi_dma_0/m_axis_mm2s_tlast has been overridden by the user. This pin will not be connected as a part of the interface connection: axi_dma_0_M_AXIS_MM2S 
-WARNING: [BD 41-1271] The connection to the pin: /conv_accel_0/slv_valid has been overridden by the user. This pin will not be connected as a part of the interface connection: axi_dma_0_M_AXIS_MM2S 
-WARNING: [BD 41-1271] The connection to the pin: /axi_dma_0/m_axis_mm2s_tdata has been overridden by the user. This pin will not be connected as a part of the interface connection: axi_dma_0_M_AXIS_MM2S 
-WARNING: [BD 41-1271] The connection to the pin: /conv_accel_0/slv_ready has been overridden by the user. This pin will not be connected as a part of the interface connection: axi_dma_0_M_AXIS_MM2S 
-Wrote  : <C:\Users\Peter\Desktop\Projects\FPGA\pynq\pynq.srcs\sources_1\bd\main\main.bd> 
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_rid'(1) to net 'auto_pc_to_m00_couplers_RID'(6) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_bid'(1) to net 'auto_pc_to_m00_couplers_BID'(6) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_AWID'(6) to net 'axi_mem_intercon_M00_AXI_AWID'(1) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_ARID'(6) to net 'axi_mem_intercon_M00_AXI_ARID'(1) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_WID'(6) to net 'axi_mem_intercon_M00_AXI_WID'(1) - Only lower order bits will be connected.
-VHDL Output written to : C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/main/synth/main.v
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_rid'(1) to net 'auto_pc_to_m00_couplers_RID'(6) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_bid'(1) to net 'auto_pc_to_m00_couplers_BID'(6) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_AWID'(6) to net 'axi_mem_intercon_M00_AXI_AWID'(1) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_ARID'(6) to net 'axi_mem_intercon_M00_AXI_ARID'(1) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_WID'(6) to net 'axi_mem_intercon_M00_AXI_WID'(1) - Only lower order bits will be connected.
-VHDL Output written to : C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/main/sim/main.v
-VHDL Output written to : C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/main/hdl/main_wrapper.v
-INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_dma_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_100M .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_intc_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/xbar .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block conv_accel_0 .
-WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/main/ip/main_auto_pc_0/main_auto_pc_0_ooc.xdc'
-INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
-WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/main/ip/main_auto_us_0/main_auto_us_0_ooc.xdc'
-INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s01_couplers/auto_us .
-WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/main/ip/main_auto_pc_1/main_auto_pc_1_ooc.xdc'
-INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/m00_couplers/auto_pc .
-Exporting to file C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/main/hw_handoff/main.hwh
-Generated Block Design Tcl file C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/main/hw_handoff/main_bd.tcl
-Generated Hardware Definition File C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/main/synth/main.hwdef
-generate_target: Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 2829.105 ; gain = 0.000
-catch { config_ip_cache -export [get_ips -all main_conv_accel_0_2] }
-catch { config_ip_cache -export [get_ips -all main_auto_pc_0] }
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP main_auto_pc_0, cache-ID = 9c6fd2f60aa25bc1; cache size = 24.951 MB.
-catch { config_ip_cache -export [get_ips -all main_auto_us_0] }
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP main_auto_us_0, cache-ID = 8d741099c6b7b707; cache size = 24.951 MB.
-catch { config_ip_cache -export [get_ips -all main_auto_pc_1] }
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP main_auto_pc_1, cache-ID = 4746d210c7003bc9; cache size = 24.951 MB.
-export_ip_user_files -of_objects [get_files C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/main/main.bd] -no_script -sync -force -quiet
-create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/main/main.bd]
-launch_runs -jobs 8 main_conv_accel_0_2_synth_1
-[Sat May 23 22:06:07 2020] Launched main_conv_accel_0_2_synth_1...
-Run output will be captured here: C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.runs/main_conv_accel_0_2_synth_1/runme.log
-export_simulation -of_objects [get_files C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/main/main.bd] -directory C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.ip_user_files -ipstatic_source_dir C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.cache/compile_simlib/modelsim} {questa=C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.cache/compile_simlib/questa} {riviera=C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.cache/compile_simlib/riviera} {activehdl=C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
-report_ip_status -name ip_status 
-reset_run synth_1
-WARNING: [Vivado 12-1017] Problems encountered:
-1. Failed to delete one or more files in run directory C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.runs/synth_1
-
-launch_runs impl_1 -to_step write_bitstream -jobs 8
-[Sat May 23 22:06:30 2020] Launched main_conv_accel_0_2_synth_1, synth_1...
-Run output will be captured here:
-main_conv_accel_0_2_synth_1: C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.runs/main_conv_accel_0_2_synth_1/runme.log
-synth_1: C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.runs/synth_1/runme.log
-[Sat May 23 22:06:31 2020] Launched impl_1...
-Run output will be captured here: C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.runs/impl_1/runme.log
-write_hw_platform -fixed -force  -include_bit -file C:/Users/Peter/Downloads/export/main_wrapper.xsa
-INFO: [Vivado 12-4895] Creating Hardware Platform: C:/Users/Peter/Downloads/export/main_wrapper.xsa ...
-WARNING: [Project 1-645] Board images not set in Hardware Platform.
-INFO: [Vivado 12-4896] Successfully created Hardware Platform: C:/Users/Peter/Downloads/export/main_wrapper.xsa
-write_hw_platform: Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2829.105 ; gain = 0.000
-CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.009 . PS DDR interfaces might fail when entering negative DQS skew values. 
-CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.033 . PS DDR interfaces might fail when entering negative DQS skew values. 
-CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.009 . PS DDR interfaces might fail when entering negative DQS skew values. 
-CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.033 . PS DDR interfaces might fail when entering negative DQS skew values. 
-WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
-CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.009 . PS DDR interfaces might fail when entering negative DQS skew values. 
-CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.033 . PS DDR interfaces might fail when entering negative DQS skew values. 
-CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.009 . PS DDR interfaces might fail when entering negative DQS skew values. 
-CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.033 . PS DDR interfaces might fail when entering negative DQS skew values. 
-startgroup
-set_property -dict [list CONFIG.PCW_QSPI_GRP_SINGLE_SS_ENABLE {1} CONFIG.PCW_I2C0_PERIPHERAL_ENABLE {1}] [get_bd_cells processing_system7_0]
-CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.009 . PS DDR interfaces might fail when entering negative DQS skew values. 
-CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.033 . PS DDR interfaces might fail when entering negative DQS skew values. 
-WARNING: [BD 41-176] The physical port 'S_AXI_GP2_rd_socket' specified in the portmap, is not found on the block! 
-WARNING: [BD 41-176] The physical port 'S_AXI_GP2_wr_socket' specified in the portmap, is not found on the block! 
-WARNING: [BD 41-176] The physical port 'S_AXI_GP3_rd_socket' specified in the portmap, is not found on the block! 
-WARNING: [BD 41-176] The physical port 'S_AXI_GP3_wr_socket' specified in the portmap, is not found on the block! 
-endgroup
-save_bd_design
-Wrote  : <C:\Users\Peter\Desktop\Projects\FPGA\pynq\pynq.srcs\sources_1\bd\main\main.bd> 
-Wrote  : <C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/main/ui/bd_791abab9.ui> 
-create_bd_design "float"
-Wrote  : <C:\Users\Peter\Desktop\Projects\FPGA\pynq\pynq.srcs\sources_1\bd\float\float.bd> 
-update_compile_order -fileset sources_1
-make_wrapper -files [get_files C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/float/float.bd] -top
-Wrote  : <C:\Users\Peter\Desktop\Projects\FPGA\pynq\pynq.srcs\sources_1\bd\float\float.bd> 
-Wrote  : <C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/float/ui/bd_fdb469fc.ui> 
-VHDL Output written to : C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/float/synth/float.v
-VHDL Output written to : C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/float/sim/float.v
-VHDL Output written to : C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/float/hdl/float_wrapper.v
-add_files -norecurse C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/float/hdl/float_wrapper.v
-update_compile_order -fileset sources_1
-open_bd_design {C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/main/main.bd}
-open_bd_design {C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/float/float.bd}
-current_bd_design main
-set tmpCopyObjs [concat  [get_bd_cells {axi_mem_intercon ps7_0_axi_periph processing_system7_0 conv_accel_0 xlconcat_0 axi_dma_0 axi_intc_0 rst_ps7_0_100M}] [get_bd_intf_ports {DDR FIXED_IO}] [get_bd_intf_nets {conv_accel_0_AXIS_MST axi_dma_0_M_AXI_MM2S axi_mem_intercon_M00_AXI processing_system7_0_M_AXI_GP0 axi_dma_0_M_AXI_S2MM ps7_0_axi_periph_M01_AXI processing_system7_0_FIXED_IO ps7_0_axi_periph_M00_AXI processing_system7_0_DDR axi_dma_0_M_AXIS_MM2S}] [get_bd_nets {axi_dma_0_mm2s_introut conv_accel_0_mst_valid processing_system7_0_FCLK_RESET0_N rst_ps7_0_100M_peripheral_aresetn axi_dma_0_m_axis_mm2s_tdata conv_accel_0_mst_last axi_dma_0_s_axis_s2mm_tready axi_intc_0_irq xlconcat_0_dout processing_system7_0_FCLK_CLK0 axi_dma_0_m_axis_mm2s_tlast axi_dma_0_s2mm_introut conv_accel_0_mst_data Net}]]
-current_bd_design float
-copy_bd_objs -from_design main / $tmpCopyObjs
-WARNING: [BD 41-1282] Ignoring parameter HAS_BURST
-WARNING: [BD 41-1281] Parameter HAS_BURST is not defined on /axi_dma_0/M_AXIS_MM2S. Setting parameter on /axi_dma_0/M_AXIS_MM2S failed
-INFO: [PS7-6] Configuring Board Preset part0. Please wait ......
-CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.009 . PS DDR interfaces might fail when entering negative DQS skew values. 
-CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.033 . PS DDR interfaces might fail when entering negative DQS skew values. 
-CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.009 . PS DDR interfaces might fail when entering negative DQS skew values. 
-CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.033 . PS DDR interfaces might fail when entering negative DQS skew values. 
-WARNING: [BD 41-176] The physical port 'S_AXI_GP2_rd_socket' specified in the portmap, is not found on the block! 
-WARNING: [BD 41-176] The physical port 'S_AXI_GP2_wr_socket' specified in the portmap, is not found on the block! 
-WARNING: [BD 41-176] The physical port 'S_AXI_GP3_rd_socket' specified in the portmap, is not found on the block! 
-WARNING: [BD 41-176] The physical port 'S_AXI_GP3_wr_socket' specified in the portmap, is not found on the block! 
-INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
-WARNING: [BD 41-1306] The connection to interface pin /conv_accel_0/slv_ready is being overridden by the user. This pin will not be connected as a part of interface connection AXIS_SLV
-WARNING: [BD 41-1306] The connection to interface pin /axi_dma_0/m_axis_mm2s_tready is being overridden by the user. This pin will not be connected as a part of interface connection M_AXIS_MM2S
-WARNING: [BD 41-1306] The connection to interface pin /conv_accel_0/slv_valid is being overridden by the user. This pin will not be connected as a part of interface connection AXIS_SLV
-WARNING: [BD 41-1306] The connection to interface pin /axi_dma_0/m_axis_mm2s_tdata is being overridden by the user. This pin will not be connected as a part of interface connection M_AXIS_MM2S
-WARNING: [BD 41-1306] The connection to interface pin /conv_accel_0/slv_data is being overridden by the user. This pin will not be connected as a part of interface connection AXIS_SLV
-WARNING: [BD 41-1306] The connection to interface pin /axi_dma_0/m_axis_mm2s_tlast is being overridden by the user. This pin will not be connected as a part of interface connection M_AXIS_MM2S
-WARNING: [BD 41-1306] The connection to interface pin /conv_accel_0/slv_last is being overridden by the user. This pin will not be connected as a part of interface connection AXIS_SLV
-WARNING: [BD 41-1306] The connection to interface pin /axi_dma_0/s_axis_s2mm_tready is being overridden by the user. This pin will not be connected as a part of interface connection S_AXIS_S2MM
-WARNING: [BD 41-1306] The connection to interface pin /conv_accel_0/mst_ready is being overridden by the user. This pin will not be connected as a part of interface connection AXIS_MST
-WARNING: [BD 41-1306] The connection to interface pin /axi_intc_0/irq is being overridden by the user. This pin will not be connected as a part of interface connection interrupt
-WARNING: [BD 41-1731] Type mismatch between connected pins: /axi_intc_0/irq(undef) and /processing_system7_0/IRQ_F2P(intr)
-WARNING: [BD 41-1306] The connection to interface pin /conv_accel_0/mst_data is being overridden by the user. This pin will not be connected as a part of interface connection AXIS_MST
-WARNING: [BD 41-1306] The connection to interface pin /axi_dma_0/s_axis_s2mm_tdata is being overridden by the user. This pin will not be connected as a part of interface connection S_AXIS_S2MM
-WARNING: [BD 41-1306] The connection to interface pin /conv_accel_0/mst_last is being overridden by the user. This pin will not be connected as a part of interface connection AXIS_MST
-WARNING: [BD 41-1306] The connection to interface pin /axi_dma_0/s_axis_s2mm_tlast is being overridden by the user. This pin will not be connected as a part of interface connection S_AXIS_S2MM
-WARNING: [BD 41-1306] The connection to interface pin /conv_accel_0/mst_valid is being overridden by the user. This pin will not be connected as a part of interface connection AXIS_MST
-WARNING: [BD 41-1306] The connection to interface pin /axi_dma_0/s_axis_s2mm_tvalid is being overridden by the user. This pin will not be connected as a part of interface connection S_AXIS_S2MM
-    copy_bd_objs: Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2829.105 ; gain = 0.000
-regenerate_bd_layout
-delete_bd_objs [get_bd_nets axi_dma_0_m_axis_mm2s_tdata] [get_bd_nets axi_dma_0_m_axis_mm2s_tlast] [get_bd_nets axi_dma_0_s_axis_s2mm_tready] [get_bd_nets conv_accel_0_mst_data] [get_bd_nets conv_accel_0_mst_last] [get_bd_nets conv_accel_0_mst_valid] [get_bd_nets Net] [get_bd_intf_nets axi_dma_0_M_AXIS_MM2S] [get_bd_intf_nets conv_accel_0_AXIS_MST] [get_bd_cells conv_accel_0]
-startgroup
-create_bd_cell -type ip -vlnv xilinx.com:ip:floating_point:7.1 floating_point_0
-endgroup
-set_property -dict [list CONFIG.Operation_Type {Multiply} CONFIG.Has_A_TLAST {true} CONFIG.Has_B_TLAST {true} CONFIG.RESULT_TLAST_Behv {OR_all_TLASTs} CONFIG.Result_Precision_Type {Single} CONFIG.C_Result_Exponent_Width {8} CONFIG.C_Result_Fraction_Width {24} CONFIG.C_Mult_Usage {Full_Usage} CONFIG.C_Latency {9} CONFIG.C_Rate {1}] [get_bd_cells floating_point_0]
-set_property location {1.5 358 158} [get_bd_cells floating_point_0]
-connect_bd_intf_net [get_bd_intf_pins floating_point_0/M_AXIS_RESULT] [get_bd_intf_pins axi_dma_0/S_AXIS_S2MM]
-connect_bd_net [get_bd_pins floating_point_0/s_axis_a_tlast] [get_bd_pins floating_point_0/s_axis_a_tdata]
-WARNING: [BD 41-1306] The connection to interface pin /floating_point_0/s_axis_a_tlast is being overridden by the user. This pin will not be connected as a part of interface connection S_AXIS_A
-WARNING: [BD 41-1306] The connection to interface pin /floating_point_0/s_axis_a_tdata is being overridden by the user. This pin will not be connected as a part of interface connection S_AXIS_A
-undo
-INFO: [Common 17-17] undo 'connect_bd_net [get_bd_pins floating_point_0/s_axis_a_tlast] [get_bd_pins floating_point_0/s_axis_a_tdata]'
-connect_bd_net [get_bd_pins axi_dma_0/m_axis_mm2s_tlast] [get_bd_pins floating_point_0/s_axis_a_tlast]
-WARNING: [BD 41-1306] The connection to interface pin /axi_dma_0/m_axis_mm2s_tlast is being overridden by the user. This pin will not be connected as a part of interface connection M_AXIS_MM2S
-WARNING: [BD 41-1306] The connection to interface pin /floating_point_0/s_axis_a_tlast is being overridden by the user. This pin will not be connected as a part of interface connection S_AXIS_A
-connect_bd_net [get_bd_pins axi_dma_0/m_axis_mm2s_tlast] [get_bd_pins floating_point_0/s_axis_b_tlast]
-WARNING: [BD 41-1306] The connection to interface pin /floating_point_0/s_axis_b_tlast is being overridden by the user. This pin will not be connected as a part of interface connection S_AXIS_B
-connect_bd_net [get_bd_pins axi_dma_0/m_axis_mm2s_tready] [get_bd_pins floating_point_0/s_axis_a_tready]
-WARNING: [BD 41-1306] The connection to interface pin /axi_dma_0/m_axis_mm2s_tready is being overridden by the user. This pin will not be connected as a part of interface connection M_AXIS_MM2S
-WARNING: [BD 41-1306] The connection to interface pin /floating_point_0/s_axis_a_tready is being overridden by the user. This pin will not be connected as a part of interface connection S_AXIS_A
-delete_bd_objs [get_bd_nets floating_point_0_s_axis_a_tready]
-startgroup
-create_bd_cell -type ip -vlnv xilinx.com:ip:util_vector_logic:2.0 util_vector_logic_0
-endgroup
-set_property -dict [list CONFIG.C_SIZE {1}] [get_bd_cells util_vector_logic_0]
-connect_bd_net [get_bd_pins util_vector_logic_0/Res] [get_bd_pins axi_dma_0/m_axis_mm2s_tready]
-WARNING: [BD 41-1306] The connection to interface pin /axi_dma_0/m_axis_mm2s_tready is being overridden by the user. This pin will not be connected as a part of interface connection M_AXIS_MM2S
-connect_bd_net [get_bd_pins util_vector_logic_0/Op1] [get_bd_pins floating_point_0/s_axis_a_tready]
-WARNING: [BD 41-1306] The connection to interface pin /floating_point_0/s_axis_a_tready is being overridden by the user. This pin will not be connected as a part of interface connection S_AXIS_A
-connect_bd_net [get_bd_pins util_vector_logic_0/Op2] [get_bd_pins floating_point_0/s_axis_b_tready]
-WARNING: [BD 41-1306] The connection to interface pin /floating_point_0/s_axis_b_tready is being overridden by the user. This pin will not be connected as a part of interface connection S_AXIS_B
-connect_bd_net [get_bd_pins floating_point_0/s_axis_b_tvalid] [get_bd_pins axi_dma_0/m_axis_mm2s_tvalid]
-WARNING: [BD 41-1306] The connection to interface pin /floating_point_0/s_axis_b_tvalid is being overridden by the user. This pin will not be connected as a part of interface connection S_AXIS_B
-WARNING: [BD 41-1306] The connection to interface pin /axi_dma_0/m_axis_mm2s_tvalid is being overridden by the user. This pin will not be connected as a part of interface connection M_AXIS_MM2S
-connect_bd_net [get_bd_pins axi_dma_0/m_axis_mm2s_tvalid] [get_bd_pins floating_point_0/s_axis_a_tvalid]
-WARNING: [BD 41-1306] The connection to interface pin /floating_point_0/s_axis_a_tvalid is being overridden by the user. This pin will not be connected as a part of interface connection S_AXIS_A
-startgroup
-create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_0
-endgroup
-set_property -dict [list CONFIG.DIN_FROM {31} CONFIG.DIN_WIDTH {64} CONFIG.DOUT_WIDTH {32}] [get_bd_cells xlslice_0]
-connect_bd_net [get_bd_pins axi_dma_0/m_axis_mm2s_tdata] [get_bd_pins xlslice_0/Din]
-WARNING: [BD 41-1306] The connection to interface pin /axi_dma_0/m_axis_mm2s_tdata is being overridden by the user. This pin will not be connected as a part of interface connection M_AXIS_MM2S
-connect_bd_net [get_bd_pins xlslice_0/Dout] [get_bd_pins floating_point_0/s_axis_a_tdata]
-WARNING: [BD 41-1306] The connection to interface pin /floating_point_0/s_axis_a_tdata is being overridden by the user. This pin will not be connected as a part of interface connection S_AXIS_A
-startgroup
-create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_1
-endgroup
-set_property -dict [list CONFIG.DIN_TO {32} CONFIG.DIN_FROM {63} CONFIG.DIN_WIDTH {64} CONFIG.DOUT_WIDTH {32}] [get_bd_cells xlslice_1]
-connect_bd_net [get_bd_pins axi_dma_0/m_axis_mm2s_tdata] [get_bd_pins xlslice_1/Din]
-connect_bd_net [get_bd_pins xlslice_1/Dout] [get_bd_pins floating_point_0/s_axis_b_tdata]
-WARNING: [BD 41-1306] The connection to interface pin /floating_point_0/s_axis_b_tdata is being overridden by the user. This pin will not be connected as a part of interface connection S_AXIS_B
-connect_bd_net [get_bd_pins floating_point_0/aclk] [get_bd_pins processing_system7_0/FCLK_CLK0]
-save_bd_design
-Wrote  : <C:\Users\Peter\Desktop\Projects\FPGA\pynq\pynq.srcs\sources_1\bd\float\float.bd> 
-Wrote  : <C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/float/ui/bd_fdb469fc.ui> 
-regenerate_bd_layout
-open_bd_design {C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/main/main.bd}
-update_ip_catalog -rebuild -scan_changes
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Peter/Desktop/Projects/FPGA/accel'.
-report_ip_status -name ip_status
-upgrade_ip -vlnv peteryuen:fl:conv_accel:1.0 [get_ips  main_conv_accel_0_2] -log ip_upgrade.log
-Upgrading 'C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/main/main.bd'
-INFO: [IP_Flow 19-3422] Upgraded main_conv_accel_0_2 (conv_accel_v1_0 1.0) from revision 2 to revision 3
-Wrote  : <C:\Users\Peter\Desktop\Projects\FPGA\pynq\pynq.srcs\sources_1\bd\main\main.bd> 
-Wrote  : <C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/main/ui/bd_791abab9.ui> 
-INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/Peter/Desktop/Projects/FPGA/pynq/ip_upgrade.log'.
-export_ip_user_files -of_objects [get_ips main_conv_accel_0_2] -no_script -sync -force -quiet
-generate_target all [get_files  C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/main/main.bd]
-WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_M_AXI_GP0_FREQMHZ(10) on '/processing_system7_0' with propagated value(100). Command ignored
-WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_S_AXI_HP0_FREQMHZ(10) on '/processing_system7_0' with propagated value(100). Command ignored
-WARNING: [xilinx.com:ip:axi_intc:4.1-13] /axi_intc_0: Interrupt output connection Bus is selected, but the interrupt bus interface is not connected to a matching interface. Please consider selecting Single instead.
-WARNING: [BD 41-1271] The connection to the pin: /conv_accel_0/mst_data has been overridden by the user. This pin will not be connected as a part of the interface connection: conv_accel_0_AXIS_MST 
-WARNING: [BD 41-1271] The connection to the pin: /conv_accel_0/mst_valid has been overridden by the user. This pin will not be connected as a part of the interface connection: conv_accel_0_AXIS_MST 
-WARNING: [BD 41-1271] The connection to the pin: /conv_accel_0/mst_last has been overridden by the user. This pin will not be connected as a part of the interface connection: conv_accel_0_AXIS_MST 
-WARNING: [BD 41-1271] The connection to the pin: /axi_dma_0/s_axis_s2mm_tready has been overridden by the user. This pin will not be connected as a part of the interface connection: conv_accel_0_AXIS_MST 
-WARNING: [BD 41-1271] The connection to the pin: /axi_dma_0/m_axis_mm2s_tlast has been overridden by the user. This pin will not be connected as a part of the interface connection: axi_dma_0_M_AXIS_MM2S 
-WARNING: [BD 41-1271] The connection to the pin: /conv_accel_0/slv_valid has been overridden by the user. This pin will not be connected as a part of the interface connection: axi_dma_0_M_AXIS_MM2S 
-WARNING: [BD 41-1271] The connection to the pin: /axi_dma_0/m_axis_mm2s_tdata has been overridden by the user. This pin will not be connected as a part of the interface connection: axi_dma_0_M_AXIS_MM2S 
-WARNING: [BD 41-1271] The connection to the pin: /conv_accel_0/slv_ready has been overridden by the user. This pin will not be connected as a part of the interface connection: axi_dma_0_M_AXIS_MM2S 
-Wrote  : <C:\Users\Peter\Desktop\Projects\FPGA\pynq\pynq.srcs\sources_1\bd\main\main.bd> 
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_rid'(1) to net 'auto_pc_to_m00_couplers_RID'(6) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_bid'(1) to net 'auto_pc_to_m00_couplers_BID'(6) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_AWID'(6) to net 'axi_mem_intercon_M00_AXI_AWID'(1) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_ARID'(6) to net 'axi_mem_intercon_M00_AXI_ARID'(1) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_WID'(6) to net 'axi_mem_intercon_M00_AXI_WID'(1) - Only lower order bits will be connected.
-VHDL Output written to : C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/main/synth/main.v
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_rid'(1) to net 'auto_pc_to_m00_couplers_RID'(6) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_bid'(1) to net 'auto_pc_to_m00_couplers_BID'(6) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_AWID'(6) to net 'axi_mem_intercon_M00_AXI_AWID'(1) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_ARID'(6) to net 'axi_mem_intercon_M00_AXI_ARID'(1) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_WID'(6) to net 'axi_mem_intercon_M00_AXI_WID'(1) - Only lower order bits will be connected.
-VHDL Output written to : C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/main/sim/main.v
-VHDL Output written to : C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/main/hdl/main_wrapper.v
-WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI_GP0'. A default connection has been created.
-WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI_HP0'. A default connection has been created.
-INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_dma_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_100M .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_intc_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/xbar .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block conv_accel_0 .
-WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/main/ip/main_auto_pc_0/main_auto_pc_0_ooc.xdc'
-INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
-WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/main/ip/main_auto_us_0/main_auto_us_0_ooc.xdc'
-INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s01_couplers/auto_us .
-WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/main/ip/main_auto_pc_1/main_auto_pc_1_ooc.xdc'
-INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/m00_couplers/auto_pc .
-Exporting to file C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/main/hw_handoff/main.hwh
-Generated Block Design Tcl file C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/main/hw_handoff/main_bd.tcl
-Generated Hardware Definition File C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/main/synth/main.hwdef
-generate_target: Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 2829.105 ; gain = 0.000
-catch { config_ip_cache -export [get_ips -all main_processing_system7_0_0] }
-catch { config_ip_cache -export [get_ips -all main_conv_accel_0_2] }
-catch { config_ip_cache -export [get_ips -all main_auto_pc_0] }
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP main_auto_pc_0, cache-ID = 9c6fd2f60aa25bc1; cache size = 26.048 MB.
-catch { config_ip_cache -export [get_ips -all main_auto_us_0] }
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP main_auto_us_0, cache-ID = 8d741099c6b7b707; cache size = 26.048 MB.
-catch { config_ip_cache -export [get_ips -all main_auto_pc_1] }
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP main_auto_pc_1, cache-ID = 4746d210c7003bc9; cache size = 26.048 MB.
-export_ip_user_files -of_objects [get_files C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/main/main.bd] -no_script -sync -force -quiet
-create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/main/main.bd]
-launch_runs -jobs 8 {main_processing_system7_0_0_synth_1 main_conv_accel_0_2_synth_1}
-[Sun May 24 05:15:19 2020] Launched main_processing_system7_0_0_synth_1, main_conv_accel_0_2_synth_1...
-Run output will be captured here:
-main_processing_system7_0_0_synth_1: C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.runs/main_processing_system7_0_0_synth_1/runme.log
-main_conv_accel_0_2_synth_1: C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.runs/main_conv_accel_0_2_synth_1/runme.log
-export_simulation -of_objects [get_files C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/main/main.bd] -directory C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.ip_user_files -ipstatic_source_dir C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.cache/compile_simlib/modelsim} {questa=C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.cache/compile_simlib/questa} {riviera=C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.cache/compile_simlib/riviera} {activehdl=C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
-report_ip_status -name ip_status 
-reset_run synth_1
-WARNING: [Vivado 12-1017] Problems encountered:
-1. Failed to delete one or more files in run directory C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.runs/synth_1
-
-launch_runs impl_1 -to_step write_bitstream -jobs 8
-INFO: [IP_Flow 19-5642] Done with IP cache export for multiple IPs
-[Sun May 24 05:15:51 2020] Launched main_processing_system7_0_0_synth_1, main_conv_accel_0_2_synth_1, synth_1...
-Run output will be captured here:
-main_processing_system7_0_0_synth_1: C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.runs/main_processing_system7_0_0_synth_1/runme.log
-main_conv_accel_0_2_synth_1: C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.runs/main_conv_accel_0_2_synth_1/runme.log
-synth_1: C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.runs/synth_1/runme.log
-[Sun May 24 05:15:52 2020] Launched impl_1...
-Run output will be captured here: C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.runs/impl_1/runme.log
-open_hw_manager
-close_hw_manager
-write_hw_platform -fixed -force  -include_bit -file C:/Users/Peter/Downloads/export/main_wrapper.xsa
-INFO: [Vivado 12-4895] Creating Hardware Platform: C:/Users/Peter/Downloads/export/main_wrapper.xsa ...
-WARNING: [Project 1-645] Board images not set in Hardware Platform.
-INFO: [Vivado 12-4896] Successfully created Hardware Platform: C:/Users/Peter/Downloads/export/main_wrapper.xsa
-write_hw_platform: Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 2829.105 ; gain = 0.000
-set_property top float_wrapper [current_fileset]
-update_compile_order -fileset sources_1
-generate_target all [get_files  C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/float/float.bd]
-WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_M_AXI_GP0_FREQMHZ(10) on '/processing_system7_0' with propagated value(100). Command ignored
-WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_S_AXI_HP0_FREQMHZ(10) on '/processing_system7_0' with propagated value(100). Command ignored
-WARNING: [xilinx.com:ip:axi_intc:4.1-13] /axi_intc_0: Interrupt output connection Bus is selected, but the interrupt bus interface is not connected to a matching interface. Please consider selecting Single instead.
-Wrote  : <C:\Users\Peter\Desktop\Projects\FPGA\pynq\pynq.srcs\sources_1\bd\float\float.bd> 
-Wrote  : <C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/float/ui/bd_fdb469fc.ui> 
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_rid'(1) to net 'auto_pc_to_m00_couplers_RID'(6) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_bid'(1) to net 'auto_pc_to_m00_couplers_BID'(6) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_WID'(6) to net 'axi_mem_intercon_M00_AXI_WID'(1) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_ARID'(6) to net 'axi_mem_intercon_M00_AXI_ARID'(1) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_AWID'(6) to net 'axi_mem_intercon_M00_AXI_AWID'(1) - Only lower order bits will be connected.
-VHDL Output written to : C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/float/synth/float.v
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_rid'(1) to net 'auto_pc_to_m00_couplers_RID'(6) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_bid'(1) to net 'auto_pc_to_m00_couplers_BID'(6) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_WID'(6) to net 'axi_mem_intercon_M00_AXI_WID'(1) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_ARID'(6) to net 'axi_mem_intercon_M00_AXI_ARID'(1) - Only lower order bits will be connected.
-WARNING: [BD 41-235] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_AWID'(6) to net 'axi_mem_intercon_M00_AXI_AWID'(1) - Only lower order bits will be connected.
-VHDL Output written to : C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/float/sim/float.v
-VHDL Output written to : C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/float/hdl/float_wrapper.v
-INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_dma_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_intc_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/xbar .
-WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI_GP0'. A default connection has been created.
-WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI_HP0'. A default connection has been created.
-INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_100M .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block floating_point_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block util_vector_logic_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_1 .
-WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/float/ip/float_auto_us_0/float_auto_us_0_ooc.xdc'
-INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s01_couplers/auto_us .
-WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/float/ip/float_auto_pc_0/float_auto_pc_0_ooc.xdc'
-INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/m00_couplers/auto_pc .
-WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/float/ip/float_auto_pc_1/float_auto_pc_1_ooc.xdc'
-INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
-Exporting to file C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/float/hw_handoff/float.hwh
-Generated Block Design Tcl file C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/float/hw_handoff/float_bd.tcl
-Generated Hardware Definition File C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/float/synth/float.hwdef
-generate_target: Time (s): cpu = 00:00:41 ; elapsed = 00:00:45 . Memory (MB): peak = 2829.105 ; gain = 0.000
-catch { config_ip_cache -export [get_ips -all float_axi_dma_0_0] }
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP float_axi_dma_0_0, cache-ID = dfa00bf62a6e328d; cache size = 27.889 MB.
-catch { config_ip_cache -export [get_ips -all float_axi_intc_0_0] }
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP float_axi_intc_0_0, cache-ID = 02ef6ae18fd95967; cache size = 27.889 MB.
-catch { config_ip_cache -export [get_ips -all float_xbar_0] }
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP float_xbar_0, cache-ID = d37cc871f94f4809; cache size = 27.890 MB.
-catch { config_ip_cache -export [get_ips -all float_processing_system7_0_0] }
-catch { config_ip_cache -export [get_ips -all float_xbar_1] }
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP float_xbar_1, cache-ID = fcefb6bb078e494f; cache size = 27.890 MB.
-catch { config_ip_cache -export [get_ips -all float_rst_ps7_0_100M_0] }
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP float_rst_ps7_0_100M_0, cache-ID = 6845870bd8179bf3; cache size = 27.890 MB.
-catch { config_ip_cache -export [get_ips -all float_floating_point_0_0] }
-catch { config_ip_cache -export [get_ips -all float_util_vector_logic_0_0] }
-catch { config_ip_cache -export [get_ips -all float_auto_us_0] }
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP float_auto_us_0, cache-ID = 8d741099c6b7b707; cache size = 27.890 MB.
-catch { config_ip_cache -export [get_ips -all float_auto_pc_0] }
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP float_auto_pc_0, cache-ID = 4746d210c7003bc9; cache size = 27.890 MB.
-catch { config_ip_cache -export [get_ips -all float_auto_pc_1] }
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP float_auto_pc_1, cache-ID = 9c6fd2f60aa25bc1; cache size = 27.890 MB.
-export_ip_user_files -of_objects [get_files C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/float/float.bd] -no_script -sync -force -quiet
-create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/float/float.bd]
-launch_runs -jobs 8 {float_processing_system7_0_0_synth_1 float_floating_point_0_0_synth_1 float_util_vector_logic_0_0_synth_1}
-[Sun May 24 05:49:40 2020] Launched float_processing_system7_0_0_synth_1, float_floating_point_0_0_synth_1, float_util_vector_logic_0_0_synth_1...
-Run output will be captured here:
-float_processing_system7_0_0_synth_1: C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.runs/float_processing_system7_0_0_synth_1/runme.log
-float_floating_point_0_0_synth_1: C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.runs/float_floating_point_0_0_synth_1/runme.log
-float_util_vector_logic_0_0_synth_1: C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.runs/float_util_vector_logic_0_0_synth_1/runme.log
-export_simulation -of_objects [get_files C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/float/float.bd] -directory C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.ip_user_files -ipstatic_source_dir C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.cache/compile_simlib/modelsim} {questa=C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.cache/compile_simlib/questa} {riviera=C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.cache/compile_simlib/riviera} {activehdl=C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
-INFO: [Vivado 12-8217] Implementation run is out of date. Exported hardware information may be inconsistent with respect to the current state of the design. It is recommended that you re-run implementation and re-generate bitstream/PDI before doing hardware export.
-write_hw_platform -fixed -force  -include_bit -file C:/Users/Peter/Downloads/export/float_wrapper.xsa
-INFO: [Vivado 12-4895] Creating Hardware Platform: C:/Users/Peter/Downloads/export/float_wrapper.xsa ...
-WARNING: [Project 1-645] Board images not set in Hardware Platform.
-INFO: [Vivado 12-4896] Successfully created Hardware Platform: C:/Users/Peter/Downloads/export/float_wrapper.xsa
-write_hw_platform: Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2829.105 ; gain = 0.000
-open_bd_design {C:/Users/Peter/Desktop/Projects/FPGA/pynq/pynq.srcs/sources_1/bd/float/float.bd}
-exit
-INFO: [Common 17-206] Exiting Vivado at Sun May 24 10:42:11 2020...
+Successfully read diagram <main> from BD file <C:/Users/peter/Desktop/Projects/FPGA/fl_accel/vivado/pynq/pynq.srcs/sources_1/bd/main/main.bd>

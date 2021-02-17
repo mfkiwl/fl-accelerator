@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sun Jul 12 23:03:09 2020
+# Process ID: 15012
+# Current directory: C:/Users/peter/Desktop/Projects/FPGA/fl_accel/vivado/conv_accel
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17372 C:\Users\peter\Desktop\Projects\FPGA\fl_accel\vivado\conv_accel\conv_accel.xpr
+# Log file: C:/Users/peter/Desktop/Projects/FPGA/fl_accel/vivado/conv_accel/vivado.log
+# Journal file: C:/Users/peter/Desktop/Projects/FPGA/fl_accel/vivado/conv_accel\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/peter/Desktop/Projects/FPGA/fl_accel/vivado/conv_accel/conv_accel.xpr
+update_compile_order -fileset sources_1

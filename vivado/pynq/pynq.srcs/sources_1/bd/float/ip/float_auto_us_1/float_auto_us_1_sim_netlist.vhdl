@@ -1,11 +1,11 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
--- Date        : Sun Apr 19 00:10:50 2020
+-- Date        : Tue May 26 22:57:37 2020
 -- Host        : Peter-XPS running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim -rename_top float_auto_us_1 -prefix
---               float_auto_us_1_ main_auto_us_1_sim_netlist.vhdl
--- Design      : main_auto_us_1
+--               float_auto_us_1_ float_auto_us_3_sim_netlist.vhdl
+-- Design      : float_auto_us_3
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
 -- Device      : xc7z020clg400-1
@@ -2862,7 +2862,7 @@ entity float_auto_us_1_axi_register_slice_v2_1_20_axic_register_slice is
     sr_awvalid : out STD_LOGIC;
     s_axi_awready : out STD_LOGIC;
     \in\ : out STD_LOGIC_VECTOR ( 27 downto 0 );
-    Q : out STD_LOGIC_VECTOR ( 41 downto 0 );
+    Q : out STD_LOGIC_VECTOR ( 73 downto 0 );
     m_axi_awburst : out STD_LOGIC_VECTOR ( 1 downto 0 );
     m_axi_awaddr : out STD_LOGIC_VECTOR ( 5 downto 0 );
     m_axi_awsize : out STD_LOGIC_VECTOR ( 2 downto 0 );
@@ -2873,12 +2873,12 @@ entity float_auto_us_1_axi_register_slice_v2_1_20_axic_register_slice is
     m_axi_awready : in STD_LOGIC;
     m_valid_i_reg_1 : in STD_LOGIC;
     SR : in STD_LOGIC_VECTOR ( 0 to 0 );
-    D : in STD_LOGIC_VECTOR ( 60 downto 0 )
+    D : in STD_LOGIC_VECTOR ( 92 downto 0 )
   );
 end float_auto_us_1_axi_register_slice_v2_1_20_axic_register_slice;
 
 architecture STRUCTURE of float_auto_us_1_axi_register_slice_v2_1_20_axic_register_slice is
-  signal \^q\ : STD_LOGIC_VECTOR ( 41 downto 0 );
+  signal \^q\ : STD_LOGIC_VECTOR ( 73 downto 0 );
   signal \USE_RTL_FIFO.data_srl_reg[31][22]_srl32_i_2_n_0\ : STD_LOGIC;
   signal \aresetn_d_reg_n_0_[0]\ : STD_LOGIC;
   signal \aresetn_d_reg_n_0_[1]\ : STD_LOGIC;
@@ -2920,7 +2920,7 @@ architecture STRUCTURE of float_auto_us_1_axi_register_slice_v2_1_20_axic_regist
   signal \m_axi_awlen[7]_INST_0_i_5_n_0\ : STD_LOGIC;
   signal \m_axi_awlen[7]_INST_0_i_6_n_0\ : STD_LOGIC;
   signal \m_axi_awlen[7]_INST_0_i_7_n_0\ : STD_LOGIC;
-  signal \m_payload_i[31]_i_1_n_0\ : STD_LOGIC;
+  signal \m_payload_i[63]_i_1_n_0\ : STD_LOGIC;
   signal m_valid_i_i_1_n_0 : STD_LOGIC;
   signal s_axi_awlen_ii : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal \^s_axi_awready\ : STD_LOGIC;
@@ -2963,7 +2963,7 @@ architecture STRUCTURE of float_auto_us_1_axi_register_slice_v2_1_20_axic_regist
   attribute SOFT_HLUTNM of \m_axi_awsize[1]_INST_0\ : label is "soft_lutpair31";
   attribute SOFT_HLUTNM of \m_axi_awsize[2]_INST_0\ : label is "soft_lutpair29";
 begin
-  Q(41 downto 0) <= \^q\(41 downto 0);
+  Q(73 downto 0) <= \^q\(73 downto 0);
   \in\(27 downto 0) <= \^in\(27 downto 0);
   s_axi_awready <= \^s_axi_awready\;
   sr_awvalid <= \^sr_awvalid\;
@@ -3234,7 +3234,7 @@ begin
       I1 => s_axi_awlen_ii(1),
       I2 => s_axi_awlen_ii(2),
       I3 => \m_axi_awaddr[2]_INST_0_i_4_n_0\,
-      I4 => \^q\(30),
+      I4 => \^q\(62),
       O => \m_axi_awaddr[1]_INST_0_i_1_n_0\
     );
 \m_axi_awaddr[1]_INST_0_i_2\: unisim.vcomponents.LUT2
@@ -3434,7 +3434,7 @@ begin
         port map (
       I0 => \m_axi_awaddr[5]_INST_0_i_4_n_0\,
       I1 => \m_axi_awaddr[5]_INST_0_i_5_n_0\,
-      I2 => \^q\(30),
+      I2 => \^q\(62),
       I3 => sr_awaddr(1),
       I4 => sr_awaddr(0),
       I5 => sr_awaddr(2),
@@ -3550,7 +3550,7 @@ begin
       INIT => X"FFFFD5FF"
     )
         port map (
-      I0 => \^q\(30),
+      I0 => \^q\(62),
       I1 => \m_axi_awaddr[2]_INST_0_i_4_n_0\,
       I2 => \m_axi_awlen[0]_INST_0_i_7_n_0\,
       I3 => sr_awburst(0),
@@ -3909,18 +3909,18 @@ begin
       I1 => \^in\(26),
       O => m_axi_awsize(2)
     );
-\m_payload_i[31]_i_1\: unisim.vcomponents.LUT1
+\m_payload_i[63]_i_1\: unisim.vcomponents.LUT1
     generic map(
       INIT => X"1"
     )
         port map (
       I0 => \^sr_awvalid\,
-      O => \m_payload_i[31]_i_1_n_0\
+      O => \m_payload_i[63]_i_1_n_0\
     );
 \m_payload_i_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => \out\,
-      CE => \m_payload_i[31]_i_1_n_0\,
+      CE => \m_payload_i[63]_i_1_n_0\,
       D => D(0),
       Q => sr_awaddr(0),
       R => '0'
@@ -3928,7 +3928,7 @@ begin
 \m_payload_i_reg[10]\: unisim.vcomponents.FDRE
      port map (
       C => \out\,
-      CE => \m_payload_i[31]_i_1_n_0\,
+      CE => \m_payload_i[63]_i_1_n_0\,
       D => D(10),
       Q => \^q\(4),
       R => '0'
@@ -3936,7 +3936,7 @@ begin
 \m_payload_i_reg[11]\: unisim.vcomponents.FDRE
      port map (
       C => \out\,
-      CE => \m_payload_i[31]_i_1_n_0\,
+      CE => \m_payload_i[63]_i_1_n_0\,
       D => D(11),
       Q => \^q\(5),
       R => '0'
@@ -3944,7 +3944,7 @@ begin
 \m_payload_i_reg[12]\: unisim.vcomponents.FDRE
      port map (
       C => \out\,
-      CE => \m_payload_i[31]_i_1_n_0\,
+      CE => \m_payload_i[63]_i_1_n_0\,
       D => D(12),
       Q => \^q\(6),
       R => '0'
@@ -3952,7 +3952,7 @@ begin
 \m_payload_i_reg[13]\: unisim.vcomponents.FDRE
      port map (
       C => \out\,
-      CE => \m_payload_i[31]_i_1_n_0\,
+      CE => \m_payload_i[63]_i_1_n_0\,
       D => D(13),
       Q => \^q\(7),
       R => '0'
@@ -3960,7 +3960,7 @@ begin
 \m_payload_i_reg[14]\: unisim.vcomponents.FDRE
      port map (
       C => \out\,
-      CE => \m_payload_i[31]_i_1_n_0\,
+      CE => \m_payload_i[63]_i_1_n_0\,
       D => D(14),
       Q => \^q\(8),
       R => '0'
@@ -3968,7 +3968,7 @@ begin
 \m_payload_i_reg[15]\: unisim.vcomponents.FDRE
      port map (
       C => \out\,
-      CE => \m_payload_i[31]_i_1_n_0\,
+      CE => \m_payload_i[63]_i_1_n_0\,
       D => D(15),
       Q => \^q\(9),
       R => '0'
@@ -3976,7 +3976,7 @@ begin
 \m_payload_i_reg[16]\: unisim.vcomponents.FDRE
      port map (
       C => \out\,
-      CE => \m_payload_i[31]_i_1_n_0\,
+      CE => \m_payload_i[63]_i_1_n_0\,
       D => D(16),
       Q => \^q\(10),
       R => '0'
@@ -3984,7 +3984,7 @@ begin
 \m_payload_i_reg[17]\: unisim.vcomponents.FDRE
      port map (
       C => \out\,
-      CE => \m_payload_i[31]_i_1_n_0\,
+      CE => \m_payload_i[63]_i_1_n_0\,
       D => D(17),
       Q => \^q\(11),
       R => '0'
@@ -3992,7 +3992,7 @@ begin
 \m_payload_i_reg[18]\: unisim.vcomponents.FDRE
      port map (
       C => \out\,
-      CE => \m_payload_i[31]_i_1_n_0\,
+      CE => \m_payload_i[63]_i_1_n_0\,
       D => D(18),
       Q => \^q\(12),
       R => '0'
@@ -4000,7 +4000,7 @@ begin
 \m_payload_i_reg[19]\: unisim.vcomponents.FDRE
      port map (
       C => \out\,
-      CE => \m_payload_i[31]_i_1_n_0\,
+      CE => \m_payload_i[63]_i_1_n_0\,
       D => D(19),
       Q => \^q\(13),
       R => '0'
@@ -4008,7 +4008,7 @@ begin
 \m_payload_i_reg[1]\: unisim.vcomponents.FDRE
      port map (
       C => \out\,
-      CE => \m_payload_i[31]_i_1_n_0\,
+      CE => \m_payload_i[63]_i_1_n_0\,
       D => D(1),
       Q => sr_awaddr(1),
       R => '0'
@@ -4016,7 +4016,7 @@ begin
 \m_payload_i_reg[20]\: unisim.vcomponents.FDRE
      port map (
       C => \out\,
-      CE => \m_payload_i[31]_i_1_n_0\,
+      CE => \m_payload_i[63]_i_1_n_0\,
       D => D(20),
       Q => \^q\(14),
       R => '0'
@@ -4024,7 +4024,7 @@ begin
 \m_payload_i_reg[21]\: unisim.vcomponents.FDRE
      port map (
       C => \out\,
-      CE => \m_payload_i[31]_i_1_n_0\,
+      CE => \m_payload_i[63]_i_1_n_0\,
       D => D(21),
       Q => \^q\(15),
       R => '0'
@@ -4032,7 +4032,7 @@ begin
 \m_payload_i_reg[22]\: unisim.vcomponents.FDRE
      port map (
       C => \out\,
-      CE => \m_payload_i[31]_i_1_n_0\,
+      CE => \m_payload_i[63]_i_1_n_0\,
       D => D(22),
       Q => \^q\(16),
       R => '0'
@@ -4040,7 +4040,7 @@ begin
 \m_payload_i_reg[23]\: unisim.vcomponents.FDRE
      port map (
       C => \out\,
-      CE => \m_payload_i[31]_i_1_n_0\,
+      CE => \m_payload_i[63]_i_1_n_0\,
       D => D(23),
       Q => \^q\(17),
       R => '0'
@@ -4048,7 +4048,7 @@ begin
 \m_payload_i_reg[24]\: unisim.vcomponents.FDRE
      port map (
       C => \out\,
-      CE => \m_payload_i[31]_i_1_n_0\,
+      CE => \m_payload_i[63]_i_1_n_0\,
       D => D(24),
       Q => \^q\(18),
       R => '0'
@@ -4056,7 +4056,7 @@ begin
 \m_payload_i_reg[25]\: unisim.vcomponents.FDRE
      port map (
       C => \out\,
-      CE => \m_payload_i[31]_i_1_n_0\,
+      CE => \m_payload_i[63]_i_1_n_0\,
       D => D(25),
       Q => \^q\(19),
       R => '0'
@@ -4064,7 +4064,7 @@ begin
 \m_payload_i_reg[26]\: unisim.vcomponents.FDRE
      port map (
       C => \out\,
-      CE => \m_payload_i[31]_i_1_n_0\,
+      CE => \m_payload_i[63]_i_1_n_0\,
       D => D(26),
       Q => \^q\(20),
       R => '0'
@@ -4072,7 +4072,7 @@ begin
 \m_payload_i_reg[27]\: unisim.vcomponents.FDRE
      port map (
       C => \out\,
-      CE => \m_payload_i[31]_i_1_n_0\,
+      CE => \m_payload_i[63]_i_1_n_0\,
       D => D(27),
       Q => \^q\(21),
       R => '0'
@@ -4080,7 +4080,7 @@ begin
 \m_payload_i_reg[28]\: unisim.vcomponents.FDRE
      port map (
       C => \out\,
-      CE => \m_payload_i[31]_i_1_n_0\,
+      CE => \m_payload_i[63]_i_1_n_0\,
       D => D(28),
       Q => \^q\(22),
       R => '0'
@@ -4088,7 +4088,7 @@ begin
 \m_payload_i_reg[29]\: unisim.vcomponents.FDRE
      port map (
       C => \out\,
-      CE => \m_payload_i[31]_i_1_n_0\,
+      CE => \m_payload_i[63]_i_1_n_0\,
       D => D(29),
       Q => \^q\(23),
       R => '0'
@@ -4096,7 +4096,7 @@ begin
 \m_payload_i_reg[2]\: unisim.vcomponents.FDRE
      port map (
       C => \out\,
-      CE => \m_payload_i[31]_i_1_n_0\,
+      CE => \m_payload_i[63]_i_1_n_0\,
       D => D(2),
       Q => sr_awaddr(2),
       R => '0'
@@ -4104,7 +4104,7 @@ begin
 \m_payload_i_reg[30]\: unisim.vcomponents.FDRE
      port map (
       C => \out\,
-      CE => \m_payload_i[31]_i_1_n_0\,
+      CE => \m_payload_i[63]_i_1_n_0\,
       D => D(30),
       Q => \^q\(24),
       R => '0'
@@ -4112,7 +4112,7 @@ begin
 \m_payload_i_reg[31]\: unisim.vcomponents.FDRE
      port map (
       C => \out\,
-      CE => \m_payload_i[31]_i_1_n_0\,
+      CE => \m_payload_i[63]_i_1_n_0\,
       D => D(31),
       Q => \^q\(25),
       R => '0'
@@ -4120,7 +4120,7 @@ begin
 \m_payload_i_reg[32]\: unisim.vcomponents.FDRE
      port map (
       C => \out\,
-      CE => \m_payload_i[31]_i_1_n_0\,
+      CE => \m_payload_i[63]_i_1_n_0\,
       D => D(32),
       Q => \^q\(26),
       R => '0'
@@ -4128,7 +4128,7 @@ begin
 \m_payload_i_reg[33]\: unisim.vcomponents.FDRE
      port map (
       C => \out\,
-      CE => \m_payload_i[31]_i_1_n_0\,
+      CE => \m_payload_i[63]_i_1_n_0\,
       D => D(33),
       Q => \^q\(27),
       R => '0'
@@ -4136,7 +4136,7 @@ begin
 \m_payload_i_reg[34]\: unisim.vcomponents.FDRE
      port map (
       C => \out\,
-      CE => \m_payload_i[31]_i_1_n_0\,
+      CE => \m_payload_i[63]_i_1_n_0\,
       D => D(34),
       Q => \^q\(28),
       R => '0'
@@ -4144,47 +4144,47 @@ begin
 \m_payload_i_reg[35]\: unisim.vcomponents.FDRE
      port map (
       C => \out\,
-      CE => \m_payload_i[31]_i_1_n_0\,
+      CE => \m_payload_i[63]_i_1_n_0\,
       D => D(35),
-      Q => sr_awsize(0),
+      Q => \^q\(29),
       R => '0'
     );
 \m_payload_i_reg[36]\: unisim.vcomponents.FDRE
      port map (
       C => \out\,
-      CE => \m_payload_i[31]_i_1_n_0\,
+      CE => \m_payload_i[63]_i_1_n_0\,
       D => D(36),
-      Q => sr_awsize(1),
+      Q => \^q\(30),
       R => '0'
     );
 \m_payload_i_reg[37]\: unisim.vcomponents.FDRE
      port map (
       C => \out\,
-      CE => \m_payload_i[31]_i_1_n_0\,
+      CE => \m_payload_i[63]_i_1_n_0\,
       D => D(37),
-      Q => sr_awsize(2),
+      Q => \^q\(31),
       R => '0'
     );
 \m_payload_i_reg[38]\: unisim.vcomponents.FDRE
      port map (
       C => \out\,
-      CE => \m_payload_i[31]_i_1_n_0\,
+      CE => \m_payload_i[63]_i_1_n_0\,
       D => D(38),
-      Q => sr_awburst(0),
+      Q => \^q\(32),
       R => '0'
     );
 \m_payload_i_reg[39]\: unisim.vcomponents.FDRE
      port map (
       C => \out\,
-      CE => \m_payload_i[31]_i_1_n_0\,
+      CE => \m_payload_i[63]_i_1_n_0\,
       D => D(39),
-      Q => sr_awburst(1),
+      Q => \^q\(33),
       R => '0'
     );
 \m_payload_i_reg[3]\: unisim.vcomponents.FDRE
      port map (
       C => \out\,
-      CE => \m_payload_i[31]_i_1_n_0\,
+      CE => \m_payload_i[63]_i_1_n_0\,
       D => D(3),
       Q => sr_awaddr(3),
       R => '0'
@@ -4192,87 +4192,87 @@ begin
 \m_payload_i_reg[40]\: unisim.vcomponents.FDRE
      port map (
       C => \out\,
-      CE => \m_payload_i[31]_i_1_n_0\,
+      CE => \m_payload_i[63]_i_1_n_0\,
       D => D(40),
-      Q => \^q\(29),
+      Q => \^q\(34),
       R => '0'
     );
 \m_payload_i_reg[41]\: unisim.vcomponents.FDRE
      port map (
       C => \out\,
-      CE => \m_payload_i[31]_i_1_n_0\,
+      CE => \m_payload_i[63]_i_1_n_0\,
       D => D(41),
-      Q => \^q\(30),
+      Q => \^q\(35),
       R => '0'
     );
 \m_payload_i_reg[42]\: unisim.vcomponents.FDRE
      port map (
       C => \out\,
-      CE => \m_payload_i[31]_i_1_n_0\,
+      CE => \m_payload_i[63]_i_1_n_0\,
       D => D(42),
-      Q => \^q\(31),
+      Q => \^q\(36),
       R => '0'
     );
 \m_payload_i_reg[43]\: unisim.vcomponents.FDRE
      port map (
       C => \out\,
-      CE => \m_payload_i[31]_i_1_n_0\,
+      CE => \m_payload_i[63]_i_1_n_0\,
       D => D(43),
-      Q => \^q\(32),
+      Q => \^q\(37),
       R => '0'
     );
 \m_payload_i_reg[44]\: unisim.vcomponents.FDRE
      port map (
       C => \out\,
-      CE => \m_payload_i[31]_i_1_n_0\,
+      CE => \m_payload_i[63]_i_1_n_0\,
       D => D(44),
-      Q => s_axi_awlen_ii(0),
+      Q => \^q\(38),
       R => '0'
     );
 \m_payload_i_reg[45]\: unisim.vcomponents.FDRE
      port map (
       C => \out\,
-      CE => \m_payload_i[31]_i_1_n_0\,
+      CE => \m_payload_i[63]_i_1_n_0\,
       D => D(45),
-      Q => s_axi_awlen_ii(1),
+      Q => \^q\(39),
       R => '0'
     );
 \m_payload_i_reg[46]\: unisim.vcomponents.FDRE
      port map (
       C => \out\,
-      CE => \m_payload_i[31]_i_1_n_0\,
+      CE => \m_payload_i[63]_i_1_n_0\,
       D => D(46),
-      Q => s_axi_awlen_ii(2),
+      Q => \^q\(40),
       R => '0'
     );
 \m_payload_i_reg[47]\: unisim.vcomponents.FDRE
      port map (
       C => \out\,
-      CE => \m_payload_i[31]_i_1_n_0\,
+      CE => \m_payload_i[63]_i_1_n_0\,
       D => D(47),
-      Q => s_axi_awlen_ii(3),
+      Q => \^q\(41),
       R => '0'
     );
 \m_payload_i_reg[48]\: unisim.vcomponents.FDRE
      port map (
       C => \out\,
-      CE => \m_payload_i[31]_i_1_n_0\,
+      CE => \m_payload_i[63]_i_1_n_0\,
       D => D(48),
-      Q => s_axi_awlen_ii(4),
+      Q => \^q\(42),
       R => '0'
     );
 \m_payload_i_reg[49]\: unisim.vcomponents.FDRE
      port map (
       C => \out\,
-      CE => \m_payload_i[31]_i_1_n_0\,
+      CE => \m_payload_i[63]_i_1_n_0\,
       D => D(49),
-      Q => s_axi_awlen_ii(5),
+      Q => \^q\(43),
       R => '0'
     );
 \m_payload_i_reg[4]\: unisim.vcomponents.FDRE
      port map (
       C => \out\,
-      CE => \m_payload_i[31]_i_1_n_0\,
+      CE => \m_payload_i[63]_i_1_n_0\,
       D => D(4),
       Q => sr_awaddr(4),
       R => '0'
@@ -4280,79 +4280,87 @@ begin
 \m_payload_i_reg[50]\: unisim.vcomponents.FDRE
      port map (
       C => \out\,
-      CE => \m_payload_i[31]_i_1_n_0\,
+      CE => \m_payload_i[63]_i_1_n_0\,
       D => D(50),
-      Q => s_axi_awlen_ii(6),
+      Q => \^q\(44),
       R => '0'
     );
 \m_payload_i_reg[51]\: unisim.vcomponents.FDRE
      port map (
       C => \out\,
-      CE => \m_payload_i[31]_i_1_n_0\,
+      CE => \m_payload_i[63]_i_1_n_0\,
       D => D(51),
-      Q => s_axi_awlen_ii(7),
+      Q => \^q\(45),
       R => '0'
     );
 \m_payload_i_reg[52]\: unisim.vcomponents.FDRE
      port map (
       C => \out\,
-      CE => \m_payload_i[31]_i_1_n_0\,
+      CE => \m_payload_i[63]_i_1_n_0\,
       D => D(52),
-      Q => \^q\(33),
+      Q => \^q\(46),
+      R => '0'
+    );
+\m_payload_i_reg[53]\: unisim.vcomponents.FDRE
+     port map (
+      C => \out\,
+      CE => \m_payload_i[63]_i_1_n_0\,
+      D => D(53),
+      Q => \^q\(47),
       R => '0'
     );
 \m_payload_i_reg[54]\: unisim.vcomponents.FDRE
      port map (
       C => \out\,
-      CE => \m_payload_i[31]_i_1_n_0\,
-      D => D(53),
-      Q => \^q\(34),
+      CE => \m_payload_i[63]_i_1_n_0\,
+      D => D(54),
+      Q => \^q\(48),
       R => '0'
     );
 \m_payload_i_reg[55]\: unisim.vcomponents.FDRE
      port map (
       C => \out\,
-      CE => \m_payload_i[31]_i_1_n_0\,
-      D => D(54),
-      Q => \^q\(35),
+      CE => \m_payload_i[63]_i_1_n_0\,
+      D => D(55),
+      Q => \^q\(49),
       R => '0'
     );
 \m_payload_i_reg[56]\: unisim.vcomponents.FDRE
      port map (
       C => \out\,
-      CE => \m_payload_i[31]_i_1_n_0\,
-      D => D(55),
-      Q => \^q\(36),
+      CE => \m_payload_i[63]_i_1_n_0\,
+      D => D(56),
+      Q => \^q\(50),
       R => '0'
     );
 \m_payload_i_reg[57]\: unisim.vcomponents.FDRE
      port map (
       C => \out\,
-      CE => \m_payload_i[31]_i_1_n_0\,
-      D => D(56),
-      Q => \^q\(37),
+      CE => \m_payload_i[63]_i_1_n_0\,
+      D => D(57),
+      Q => \^q\(51),
       R => '0'
     );
 \m_payload_i_reg[58]\: unisim.vcomponents.FDRE
      port map (
       C => \out\,
-      CE => \m_payload_i[31]_i_1_n_0\,
-      D => D(57),
-      Q => \^q\(38),
+      CE => \m_payload_i[63]_i_1_n_0\,
+      D => D(58),
+      Q => \^q\(52),
       R => '0'
     );
 \m_payload_i_reg[59]\: unisim.vcomponents.FDRE
      port map (
       C => \out\,
-      CE => \m_payload_i[31]_i_1_n_0\,
-      D => D(58),
-      Q => \^q\(39),
+      CE => \m_payload_i[63]_i_1_n_0\,
+      D => D(59),
+      Q => \^q\(53),
       R => '0'
     );
 \m_payload_i_reg[5]\: unisim.vcomponents.FDRE
      port map (
       C => \out\,
-      CE => \m_payload_i[31]_i_1_n_0\,
+      CE => \m_payload_i[63]_i_1_n_0\,
       D => D(5),
       Q => sr_awaddr(5),
       R => '0'
@@ -4360,47 +4368,295 @@ begin
 \m_payload_i_reg[60]\: unisim.vcomponents.FDRE
      port map (
       C => \out\,
-      CE => \m_payload_i[31]_i_1_n_0\,
-      D => D(59),
-      Q => \^q\(40),
+      CE => \m_payload_i[63]_i_1_n_0\,
+      D => D(60),
+      Q => \^q\(54),
       R => '0'
     );
 \m_payload_i_reg[61]\: unisim.vcomponents.FDRE
      port map (
       C => \out\,
-      CE => \m_payload_i[31]_i_1_n_0\,
-      D => D(60),
-      Q => \^q\(41),
+      CE => \m_payload_i[63]_i_1_n_0\,
+      D => D(61),
+      Q => \^q\(55),
+      R => '0'
+    );
+\m_payload_i_reg[62]\: unisim.vcomponents.FDRE
+     port map (
+      C => \out\,
+      CE => \m_payload_i[63]_i_1_n_0\,
+      D => D(62),
+      Q => \^q\(56),
+      R => '0'
+    );
+\m_payload_i_reg[63]\: unisim.vcomponents.FDRE
+     port map (
+      C => \out\,
+      CE => \m_payload_i[63]_i_1_n_0\,
+      D => D(63),
+      Q => \^q\(57),
+      R => '0'
+    );
+\m_payload_i_reg[64]\: unisim.vcomponents.FDRE
+     port map (
+      C => \out\,
+      CE => \m_payload_i[63]_i_1_n_0\,
+      D => D(64),
+      Q => \^q\(58),
+      R => '0'
+    );
+\m_payload_i_reg[65]\: unisim.vcomponents.FDRE
+     port map (
+      C => \out\,
+      CE => \m_payload_i[63]_i_1_n_0\,
+      D => D(65),
+      Q => \^q\(59),
+      R => '0'
+    );
+\m_payload_i_reg[66]\: unisim.vcomponents.FDRE
+     port map (
+      C => \out\,
+      CE => \m_payload_i[63]_i_1_n_0\,
+      D => D(66),
+      Q => \^q\(60),
+      R => '0'
+    );
+\m_payload_i_reg[67]\: unisim.vcomponents.FDRE
+     port map (
+      C => \out\,
+      CE => \m_payload_i[63]_i_1_n_0\,
+      D => D(67),
+      Q => sr_awsize(0),
+      R => '0'
+    );
+\m_payload_i_reg[68]\: unisim.vcomponents.FDRE
+     port map (
+      C => \out\,
+      CE => \m_payload_i[63]_i_1_n_0\,
+      D => D(68),
+      Q => sr_awsize(1),
+      R => '0'
+    );
+\m_payload_i_reg[69]\: unisim.vcomponents.FDRE
+     port map (
+      C => \out\,
+      CE => \m_payload_i[63]_i_1_n_0\,
+      D => D(69),
+      Q => sr_awsize(2),
       R => '0'
     );
 \m_payload_i_reg[6]\: unisim.vcomponents.FDRE
      port map (
       C => \out\,
-      CE => \m_payload_i[31]_i_1_n_0\,
+      CE => \m_payload_i[63]_i_1_n_0\,
       D => D(6),
       Q => \^q\(0),
+      R => '0'
+    );
+\m_payload_i_reg[70]\: unisim.vcomponents.FDRE
+     port map (
+      C => \out\,
+      CE => \m_payload_i[63]_i_1_n_0\,
+      D => D(70),
+      Q => sr_awburst(0),
+      R => '0'
+    );
+\m_payload_i_reg[71]\: unisim.vcomponents.FDRE
+     port map (
+      C => \out\,
+      CE => \m_payload_i[63]_i_1_n_0\,
+      D => D(71),
+      Q => sr_awburst(1),
+      R => '0'
+    );
+\m_payload_i_reg[72]\: unisim.vcomponents.FDRE
+     port map (
+      C => \out\,
+      CE => \m_payload_i[63]_i_1_n_0\,
+      D => D(72),
+      Q => \^q\(61),
+      R => '0'
+    );
+\m_payload_i_reg[73]\: unisim.vcomponents.FDRE
+     port map (
+      C => \out\,
+      CE => \m_payload_i[63]_i_1_n_0\,
+      D => D(73),
+      Q => \^q\(62),
+      R => '0'
+    );
+\m_payload_i_reg[74]\: unisim.vcomponents.FDRE
+     port map (
+      C => \out\,
+      CE => \m_payload_i[63]_i_1_n_0\,
+      D => D(74),
+      Q => \^q\(63),
+      R => '0'
+    );
+\m_payload_i_reg[75]\: unisim.vcomponents.FDRE
+     port map (
+      C => \out\,
+      CE => \m_payload_i[63]_i_1_n_0\,
+      D => D(75),
+      Q => \^q\(64),
+      R => '0'
+    );
+\m_payload_i_reg[76]\: unisim.vcomponents.FDRE
+     port map (
+      C => \out\,
+      CE => \m_payload_i[63]_i_1_n_0\,
+      D => D(76),
+      Q => s_axi_awlen_ii(0),
+      R => '0'
+    );
+\m_payload_i_reg[77]\: unisim.vcomponents.FDRE
+     port map (
+      C => \out\,
+      CE => \m_payload_i[63]_i_1_n_0\,
+      D => D(77),
+      Q => s_axi_awlen_ii(1),
+      R => '0'
+    );
+\m_payload_i_reg[78]\: unisim.vcomponents.FDRE
+     port map (
+      C => \out\,
+      CE => \m_payload_i[63]_i_1_n_0\,
+      D => D(78),
+      Q => s_axi_awlen_ii(2),
+      R => '0'
+    );
+\m_payload_i_reg[79]\: unisim.vcomponents.FDRE
+     port map (
+      C => \out\,
+      CE => \m_payload_i[63]_i_1_n_0\,
+      D => D(79),
+      Q => s_axi_awlen_ii(3),
       R => '0'
     );
 \m_payload_i_reg[7]\: unisim.vcomponents.FDRE
      port map (
       C => \out\,
-      CE => \m_payload_i[31]_i_1_n_0\,
+      CE => \m_payload_i[63]_i_1_n_0\,
       D => D(7),
       Q => \^q\(1),
+      R => '0'
+    );
+\m_payload_i_reg[80]\: unisim.vcomponents.FDRE
+     port map (
+      C => \out\,
+      CE => \m_payload_i[63]_i_1_n_0\,
+      D => D(80),
+      Q => s_axi_awlen_ii(4),
+      R => '0'
+    );
+\m_payload_i_reg[81]\: unisim.vcomponents.FDRE
+     port map (
+      C => \out\,
+      CE => \m_payload_i[63]_i_1_n_0\,
+      D => D(81),
+      Q => s_axi_awlen_ii(5),
+      R => '0'
+    );
+\m_payload_i_reg[82]\: unisim.vcomponents.FDRE
+     port map (
+      C => \out\,
+      CE => \m_payload_i[63]_i_1_n_0\,
+      D => D(82),
+      Q => s_axi_awlen_ii(6),
+      R => '0'
+    );
+\m_payload_i_reg[83]\: unisim.vcomponents.FDRE
+     port map (
+      C => \out\,
+      CE => \m_payload_i[63]_i_1_n_0\,
+      D => D(83),
+      Q => s_axi_awlen_ii(7),
+      R => '0'
+    );
+\m_payload_i_reg[84]\: unisim.vcomponents.FDRE
+     port map (
+      C => \out\,
+      CE => \m_payload_i[63]_i_1_n_0\,
+      D => D(84),
+      Q => \^q\(65),
+      R => '0'
+    );
+\m_payload_i_reg[86]\: unisim.vcomponents.FDRE
+     port map (
+      C => \out\,
+      CE => \m_payload_i[63]_i_1_n_0\,
+      D => D(85),
+      Q => \^q\(66),
+      R => '0'
+    );
+\m_payload_i_reg[87]\: unisim.vcomponents.FDRE
+     port map (
+      C => \out\,
+      CE => \m_payload_i[63]_i_1_n_0\,
+      D => D(86),
+      Q => \^q\(67),
+      R => '0'
+    );
+\m_payload_i_reg[88]\: unisim.vcomponents.FDRE
+     port map (
+      C => \out\,
+      CE => \m_payload_i[63]_i_1_n_0\,
+      D => D(87),
+      Q => \^q\(68),
+      R => '0'
+    );
+\m_payload_i_reg[89]\: unisim.vcomponents.FDRE
+     port map (
+      C => \out\,
+      CE => \m_payload_i[63]_i_1_n_0\,
+      D => D(88),
+      Q => \^q\(69),
       R => '0'
     );
 \m_payload_i_reg[8]\: unisim.vcomponents.FDRE
      port map (
       C => \out\,
-      CE => \m_payload_i[31]_i_1_n_0\,
+      CE => \m_payload_i[63]_i_1_n_0\,
       D => D(8),
       Q => \^q\(2),
+      R => '0'
+    );
+\m_payload_i_reg[90]\: unisim.vcomponents.FDRE
+     port map (
+      C => \out\,
+      CE => \m_payload_i[63]_i_1_n_0\,
+      D => D(89),
+      Q => \^q\(70),
+      R => '0'
+    );
+\m_payload_i_reg[91]\: unisim.vcomponents.FDRE
+     port map (
+      C => \out\,
+      CE => \m_payload_i[63]_i_1_n_0\,
+      D => D(90),
+      Q => \^q\(71),
+      R => '0'
+    );
+\m_payload_i_reg[92]\: unisim.vcomponents.FDRE
+     port map (
+      C => \out\,
+      CE => \m_payload_i[63]_i_1_n_0\,
+      D => D(91),
+      Q => \^q\(72),
+      R => '0'
+    );
+\m_payload_i_reg[93]\: unisim.vcomponents.FDRE
+     port map (
+      C => \out\,
+      CE => \m_payload_i[63]_i_1_n_0\,
+      D => D(92),
+      Q => \^q\(73),
       R => '0'
     );
 \m_payload_i_reg[9]\: unisim.vcomponents.FDRE
      port map (
       C => \out\,
-      CE => \m_payload_i[31]_i_1_n_0\,
+      CE => \m_payload_i[63]_i_1_n_0\,
       D => D(9),
       Q => \^q\(3),
       R => '0'
@@ -6183,7 +6439,7 @@ entity float_auto_us_1_axi_register_slice_v2_1_20_axi_register_slice is
     sr_awvalid : out STD_LOGIC;
     s_axi_awready : out STD_LOGIC;
     \in\ : out STD_LOGIC_VECTOR ( 27 downto 0 );
-    Q : out STD_LOGIC_VECTOR ( 41 downto 0 );
+    Q : out STD_LOGIC_VECTOR ( 73 downto 0 );
     m_axi_awburst : out STD_LOGIC_VECTOR ( 1 downto 0 );
     m_axi_awaddr : out STD_LOGIC_VECTOR ( 5 downto 0 );
     m_axi_awsize : out STD_LOGIC_VECTOR ( 2 downto 0 );
@@ -6194,7 +6450,7 @@ entity float_auto_us_1_axi_register_slice_v2_1_20_axi_register_slice is
     m_axi_awready : in STD_LOGIC;
     m_valid_i_reg_0 : in STD_LOGIC;
     SR : in STD_LOGIC_VECTOR ( 0 to 0 );
-    D : in STD_LOGIC_VECTOR ( 60 downto 0 )
+    D : in STD_LOGIC_VECTOR ( 92 downto 0 )
   );
 end float_auto_us_1_axi_register_slice_v2_1_20_axi_register_slice;
 
@@ -6202,8 +6458,8 @@ architecture STRUCTURE of float_auto_us_1_axi_register_slice_v2_1_20_axi_registe
 begin
 \aw.aw_pipe\: entity work.float_auto_us_1_axi_register_slice_v2_1_20_axic_register_slice
      port map (
-      D(60 downto 0) => D(60 downto 0),
-      Q(41 downto 0) => Q(41 downto 0),
+      D(92 downto 0) => D(92 downto 0),
+      Q(73 downto 0) => Q(73 downto 0),
       SR(0) => SR(0),
       \in\(27 downto 0) => \in\(27 downto 0),
       m_axi_awaddr(5 downto 0) => m_axi_awaddr(5 downto 0),
@@ -6226,7 +6482,7 @@ use UNISIM.VCOMPONENTS.ALL;
 entity float_auto_us_1_axi_dwidth_converter_v2_1_20_axi_upsizer is
   port (
     m_axi_awlen : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    Q : out STD_LOGIC_VECTOR ( 41 downto 0 );
+    Q : out STD_LOGIC_VECTOR ( 73 downto 0 );
     m_axi_awburst : out STD_LOGIC_VECTOR ( 1 downto 0 );
     m_axi_awaddr : out STD_LOGIC_VECTOR ( 5 downto 0 );
     m_axi_wdata : out STD_LOGIC_VECTOR ( 63 downto 0 );
@@ -6242,7 +6498,7 @@ entity float_auto_us_1_axi_dwidth_converter_v2_1_20_axi_upsizer is
     s_axi_wlast : in STD_LOGIC;
     s_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
     s_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    D : in STD_LOGIC_VECTOR ( 60 downto 0 );
+    D : in STD_LOGIC_VECTOR ( 92 downto 0 );
     m_valid_i_reg : in STD_LOGIC;
     m_axi_wready : in STD_LOGIC;
     s_axi_wvalid : in STD_LOGIC;
@@ -6452,8 +6708,8 @@ begin
     );
 si_register_slice_inst: entity work.float_auto_us_1_axi_register_slice_v2_1_20_axi_register_slice
      port map (
-      D(60 downto 0) => D(60 downto 0),
-      Q(41 downto 0) => Q(41 downto 0),
+      D(92 downto 0) => D(92 downto 0),
+      Q(73 downto 0) => Q(73 downto 0),
       SR(0) => \USE_WRITE.gen_non_fifo_w_upsizer.write_data_inst_n_1\,
       \in\(27) => cmd_fix_i,
       \in\(26) => cmd_modified_i,
@@ -6492,7 +6748,7 @@ entity float_auto_us_1_axi_dwidth_converter_v2_1_20_top is
     s_axi_aclk : in STD_LOGIC;
     s_axi_aresetn : in STD_LOGIC;
     s_axi_awid : in STD_LOGIC_VECTOR ( 0 to 0 );
-    s_axi_awaddr : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    s_axi_awaddr : in STD_LOGIC_VECTOR ( 63 downto 0 );
     s_axi_awlen : in STD_LOGIC_VECTOR ( 7 downto 0 );
     s_axi_awsize : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s_axi_awburst : in STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -6513,7 +6769,7 @@ entity float_auto_us_1_axi_dwidth_converter_v2_1_20_top is
     s_axi_bvalid : out STD_LOGIC;
     s_axi_bready : in STD_LOGIC;
     s_axi_arid : in STD_LOGIC_VECTOR ( 0 to 0 );
-    s_axi_araddr : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    s_axi_araddr : in STD_LOGIC_VECTOR ( 63 downto 0 );
     s_axi_arlen : in STD_LOGIC_VECTOR ( 7 downto 0 );
     s_axi_arsize : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s_axi_arburst : in STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -6532,7 +6788,7 @@ entity float_auto_us_1_axi_dwidth_converter_v2_1_20_top is
     s_axi_rready : in STD_LOGIC;
     m_axi_aclk : in STD_LOGIC;
     m_axi_aresetn : in STD_LOGIC;
-    m_axi_awaddr : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    m_axi_awaddr : out STD_LOGIC_VECTOR ( 63 downto 0 );
     m_axi_awlen : out STD_LOGIC_VECTOR ( 7 downto 0 );
     m_axi_awsize : out STD_LOGIC_VECTOR ( 2 downto 0 );
     m_axi_awburst : out STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -6551,7 +6807,7 @@ entity float_auto_us_1_axi_dwidth_converter_v2_1_20_top is
     m_axi_bresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
     m_axi_bvalid : in STD_LOGIC;
     m_axi_bready : out STD_LOGIC;
-    m_axi_araddr : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    m_axi_araddr : out STD_LOGIC_VECTOR ( 63 downto 0 );
     m_axi_arlen : out STD_LOGIC_VECTOR ( 7 downto 0 );
     m_axi_arsize : out STD_LOGIC_VECTOR ( 2 downto 0 );
     m_axi_arburst : out STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -6569,7 +6825,7 @@ entity float_auto_us_1_axi_dwidth_converter_v2_1_20_top is
     m_axi_rready : out STD_LOGIC
   );
   attribute C_AXI_ADDR_WIDTH : integer;
-  attribute C_AXI_ADDR_WIDTH of float_auto_us_1_axi_dwidth_converter_v2_1_20_top : entity is 32;
+  attribute C_AXI_ADDR_WIDTH of float_auto_us_1_axi_dwidth_converter_v2_1_20_top : entity is 64;
   attribute C_AXI_IS_ACLK_ASYNC : integer;
   attribute C_AXI_IS_ACLK_ASYNC of float_auto_us_1_axi_dwidth_converter_v2_1_20_top : entity is 0;
   attribute C_AXI_PROTOCOL : integer;
@@ -6636,6 +6892,38 @@ begin
   \^m_axi_bresp\(1 downto 0) <= m_axi_bresp(1 downto 0);
   \^m_axi_bvalid\ <= m_axi_bvalid;
   \^s_axi_bready\ <= s_axi_bready;
+  m_axi_araddr(63) <= \<const0>\;
+  m_axi_araddr(62) <= \<const0>\;
+  m_axi_araddr(61) <= \<const0>\;
+  m_axi_araddr(60) <= \<const0>\;
+  m_axi_araddr(59) <= \<const0>\;
+  m_axi_araddr(58) <= \<const0>\;
+  m_axi_araddr(57) <= \<const0>\;
+  m_axi_araddr(56) <= \<const0>\;
+  m_axi_araddr(55) <= \<const0>\;
+  m_axi_araddr(54) <= \<const0>\;
+  m_axi_araddr(53) <= \<const0>\;
+  m_axi_araddr(52) <= \<const0>\;
+  m_axi_araddr(51) <= \<const0>\;
+  m_axi_araddr(50) <= \<const0>\;
+  m_axi_araddr(49) <= \<const0>\;
+  m_axi_araddr(48) <= \<const0>\;
+  m_axi_araddr(47) <= \<const0>\;
+  m_axi_araddr(46) <= \<const0>\;
+  m_axi_araddr(45) <= \<const0>\;
+  m_axi_araddr(44) <= \<const0>\;
+  m_axi_araddr(43) <= \<const0>\;
+  m_axi_araddr(42) <= \<const0>\;
+  m_axi_araddr(41) <= \<const0>\;
+  m_axi_araddr(40) <= \<const0>\;
+  m_axi_araddr(39) <= \<const0>\;
+  m_axi_araddr(38) <= \<const0>\;
+  m_axi_araddr(37) <= \<const0>\;
+  m_axi_araddr(36) <= \<const0>\;
+  m_axi_araddr(35) <= \<const0>\;
+  m_axi_araddr(34) <= \<const0>\;
+  m_axi_araddr(33) <= \<const0>\;
+  m_axi_araddr(32) <= \<const0>\;
   m_axi_araddr(31) <= \<const0>\;
   m_axi_araddr(30) <= \<const0>\;
   m_axi_araddr(29) <= \<const0>\;
@@ -6747,21 +7035,21 @@ GND: unisim.vcomponents.GND
     );
 \gen_upsizer.gen_full_upsizer.axi_upsizer_inst\: entity work.float_auto_us_1_axi_dwidth_converter_v2_1_20_axi_upsizer
      port map (
-      D(60 downto 57) => s_axi_awregion(3 downto 0),
-      D(56 downto 53) => s_axi_awqos(3 downto 0),
-      D(52) => s_axi_awlock(0),
-      D(51 downto 44) => s_axi_awlen(7 downto 0),
-      D(43 downto 40) => s_axi_awcache(3 downto 0),
-      D(39 downto 38) => s_axi_awburst(1 downto 0),
-      D(37 downto 35) => s_axi_awsize(2 downto 0),
-      D(34 downto 32) => s_axi_awprot(2 downto 0),
-      D(31 downto 0) => s_axi_awaddr(31 downto 0),
-      Q(41 downto 38) => m_axi_awregion(3 downto 0),
-      Q(37 downto 34) => m_axi_awqos(3 downto 0),
-      Q(33) => m_axi_awlock(0),
-      Q(32 downto 29) => m_axi_awcache(3 downto 0),
-      Q(28 downto 26) => m_axi_awprot(2 downto 0),
-      Q(25 downto 0) => m_axi_awaddr(31 downto 6),
+      D(92 downto 89) => s_axi_awregion(3 downto 0),
+      D(88 downto 85) => s_axi_awqos(3 downto 0),
+      D(84) => s_axi_awlock(0),
+      D(83 downto 76) => s_axi_awlen(7 downto 0),
+      D(75 downto 72) => s_axi_awcache(3 downto 0),
+      D(71 downto 70) => s_axi_awburst(1 downto 0),
+      D(69 downto 67) => s_axi_awsize(2 downto 0),
+      D(66 downto 64) => s_axi_awprot(2 downto 0),
+      D(63 downto 0) => s_axi_awaddr(63 downto 0),
+      Q(73 downto 70) => m_axi_awregion(3 downto 0),
+      Q(69 downto 66) => m_axi_awqos(3 downto 0),
+      Q(65) => m_axi_awlock(0),
+      Q(64 downto 61) => m_axi_awcache(3 downto 0),
+      Q(60 downto 58) => m_axi_awprot(2 downto 0),
+      Q(57 downto 0) => m_axi_awaddr(63 downto 6),
       \USE_REGISTER.M_AXI_WVALID_q_reg\ => m_axi_wvalid,
       m_axi_awaddr(5 downto 0) => m_axi_awaddr(5 downto 0),
       m_axi_awburst(1 downto 0) => m_axi_awburst(1 downto 0),
@@ -6792,7 +7080,7 @@ entity float_auto_us_1 is
   port (
     s_axi_aclk : in STD_LOGIC;
     s_axi_aresetn : in STD_LOGIC;
-    s_axi_awaddr : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    s_axi_awaddr : in STD_LOGIC_VECTOR ( 63 downto 0 );
     s_axi_awlen : in STD_LOGIC_VECTOR ( 7 downto 0 );
     s_axi_awsize : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s_axi_awburst : in STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -6811,7 +7099,7 @@ entity float_auto_us_1 is
     s_axi_bresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
     s_axi_bvalid : out STD_LOGIC;
     s_axi_bready : in STD_LOGIC;
-    m_axi_awaddr : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    m_axi_awaddr : out STD_LOGIC_VECTOR ( 63 downto 0 );
     m_axi_awlen : out STD_LOGIC_VECTOR ( 7 downto 0 );
     m_axi_awsize : out STD_LOGIC_VECTOR ( 2 downto 0 );
     m_axi_awburst : out STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -6834,7 +7122,7 @@ entity float_auto_us_1 is
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of float_auto_us_1 : entity is true;
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of float_auto_us_1 : entity is "main_auto_us_1,axi_dwidth_converter_v2_1_20_top,{}";
+  attribute CHECK_LICENSE_TYPE of float_auto_us_1 : entity is "float_auto_us_3,axi_dwidth_converter_v2_1_20_top,{}";
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of float_auto_us_1 : entity is "yes";
   attribute X_CORE_INFO : string;
@@ -6847,7 +7135,7 @@ architecture STRUCTURE of float_auto_us_1 is
   signal NLW_inst_s_axi_arready_UNCONNECTED : STD_LOGIC;
   signal NLW_inst_s_axi_rlast_UNCONNECTED : STD_LOGIC;
   signal NLW_inst_s_axi_rvalid_UNCONNECTED : STD_LOGIC;
-  signal NLW_inst_m_axi_araddr_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal NLW_inst_m_axi_araddr_UNCONNECTED : STD_LOGIC_VECTOR ( 63 downto 0 );
   signal NLW_inst_m_axi_arburst_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal NLW_inst_m_axi_arcache_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal NLW_inst_m_axi_arlen_UNCONNECTED : STD_LOGIC_VECTOR ( 7 downto 0 );
@@ -6861,7 +7149,7 @@ architecture STRUCTURE of float_auto_us_1 is
   signal NLW_inst_s_axi_rid_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_inst_s_axi_rresp_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
   attribute C_AXI_ADDR_WIDTH : integer;
-  attribute C_AXI_ADDR_WIDTH of inst : label is 32;
+  attribute C_AXI_ADDR_WIDTH of inst : label is 64;
   attribute C_AXI_IS_ACLK_ASYNC : integer;
   attribute C_AXI_IS_ACLK_ASYNC of inst : label is 0;
   attribute C_AXI_PROTOCOL : integer;
@@ -6916,19 +7204,19 @@ architecture STRUCTURE of float_auto_us_1 is
   attribute X_INTERFACE_INFO of m_axi_awvalid : signal is "xilinx.com:interface:aximm:1.0 M_AXI AWVALID";
   attribute X_INTERFACE_INFO of m_axi_bready : signal is "xilinx.com:interface:aximm:1.0 M_AXI BREADY";
   attribute X_INTERFACE_PARAMETER : string;
-  attribute X_INTERFACE_PARAMETER of m_axi_bready : signal is "XIL_INTERFACENAME M_AXI, DATA_WIDTH 64, PROTOCOL AXI4, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE WRITE_ONLY, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 0, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 16, MAX_BURST_LENGTH 128, PHASE 0.000, CLK_DOMAIN main_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of m_axi_bready : signal is "XIL_INTERFACENAME M_AXI, DATA_WIDTH 64, PROTOCOL AXI4, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 64, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE WRITE_ONLY, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 0, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 16, MAX_BURST_LENGTH 8, PHASE 0.000, CLK_DOMAIN float_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of m_axi_bvalid : signal is "xilinx.com:interface:aximm:1.0 M_AXI BVALID";
   attribute X_INTERFACE_INFO of m_axi_wlast : signal is "xilinx.com:interface:aximm:1.0 M_AXI WLAST";
   attribute X_INTERFACE_INFO of m_axi_wready : signal is "xilinx.com:interface:aximm:1.0 M_AXI WREADY";
   attribute X_INTERFACE_INFO of m_axi_wvalid : signal is "xilinx.com:interface:aximm:1.0 M_AXI WVALID";
   attribute X_INTERFACE_INFO of s_axi_aclk : signal is "xilinx.com:signal:clock:1.0 SI_CLK CLK";
-  attribute X_INTERFACE_PARAMETER of s_axi_aclk : signal is "XIL_INTERFACENAME SI_CLK, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN main_processing_system7_0_0_FCLK_CLK0, ASSOCIATED_BUSIF S_AXI:M_AXI, ASSOCIATED_RESET S_AXI_ARESETN, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of s_axi_aclk : signal is "XIL_INTERFACENAME SI_CLK, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN float_processing_system7_0_0_FCLK_CLK0, ASSOCIATED_BUSIF S_AXI:M_AXI, ASSOCIATED_RESET S_AXI_ARESETN, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of s_axi_aresetn : signal is "xilinx.com:signal:reset:1.0 SI_RST RST";
   attribute X_INTERFACE_PARAMETER of s_axi_aresetn : signal is "XIL_INTERFACENAME SI_RST, POLARITY ACTIVE_LOW, INSERT_VIP 0, TYPE INTERCONNECT";
   attribute X_INTERFACE_INFO of s_axi_awready : signal is "xilinx.com:interface:aximm:1.0 S_AXI AWREADY";
   attribute X_INTERFACE_INFO of s_axi_awvalid : signal is "xilinx.com:interface:aximm:1.0 S_AXI AWVALID";
   attribute X_INTERFACE_INFO of s_axi_bready : signal is "xilinx.com:interface:aximm:1.0 S_AXI BREADY";
-  attribute X_INTERFACE_PARAMETER of s_axi_bready : signal is "XIL_INTERFACENAME S_AXI, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE WRITE_ONLY, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 1, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 0, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 16, MAX_BURST_LENGTH 256, PHASE 0.000, CLK_DOMAIN main_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of s_axi_bready : signal is "XIL_INTERFACENAME S_AXI, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 64, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE WRITE_ONLY, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 1, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 0, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 16, MAX_BURST_LENGTH 16, PHASE 0.000, CLK_DOMAIN float_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of s_axi_bvalid : signal is "xilinx.com:interface:aximm:1.0 S_AXI BVALID";
   attribute X_INTERFACE_INFO of s_axi_wlast : signal is "xilinx.com:interface:aximm:1.0 S_AXI WLAST";
   attribute X_INTERFACE_INFO of s_axi_wready : signal is "xilinx.com:interface:aximm:1.0 S_AXI WREADY";
@@ -6961,7 +7249,7 @@ begin
 inst: entity work.float_auto_us_1_axi_dwidth_converter_v2_1_20_top
      port map (
       m_axi_aclk => '0',
-      m_axi_araddr(31 downto 0) => NLW_inst_m_axi_araddr_UNCONNECTED(31 downto 0),
+      m_axi_araddr(63 downto 0) => NLW_inst_m_axi_araddr_UNCONNECTED(63 downto 0),
       m_axi_arburst(1 downto 0) => NLW_inst_m_axi_arburst_UNCONNECTED(1 downto 0),
       m_axi_arcache(3 downto 0) => NLW_inst_m_axi_arcache_UNCONNECTED(3 downto 0),
       m_axi_aresetn => '0',
@@ -6973,7 +7261,7 @@ inst: entity work.float_auto_us_1_axi_dwidth_converter_v2_1_20_top
       m_axi_arregion(3 downto 0) => NLW_inst_m_axi_arregion_UNCONNECTED(3 downto 0),
       m_axi_arsize(2 downto 0) => NLW_inst_m_axi_arsize_UNCONNECTED(2 downto 0),
       m_axi_arvalid => NLW_inst_m_axi_arvalid_UNCONNECTED,
-      m_axi_awaddr(31 downto 0) => m_axi_awaddr(31 downto 0),
+      m_axi_awaddr(63 downto 0) => m_axi_awaddr(63 downto 0),
       m_axi_awburst(1 downto 0) => m_axi_awburst(1 downto 0),
       m_axi_awcache(3 downto 0) => m_axi_awcache(3 downto 0),
       m_axi_awlen(7 downto 0) => m_axi_awlen(7 downto 0),
@@ -6998,7 +7286,7 @@ inst: entity work.float_auto_us_1_axi_dwidth_converter_v2_1_20_top
       m_axi_wstrb(7 downto 0) => m_axi_wstrb(7 downto 0),
       m_axi_wvalid => m_axi_wvalid,
       s_axi_aclk => s_axi_aclk,
-      s_axi_araddr(31 downto 0) => B"00000000000000000000000000000000",
+      s_axi_araddr(63 downto 0) => B"0000000000000000000000000000000000000000000000000000000000000000",
       s_axi_arburst(1 downto 0) => B"01",
       s_axi_arcache(3 downto 0) => B"0000",
       s_axi_aresetn => s_axi_aresetn,
@@ -7011,7 +7299,7 @@ inst: entity work.float_auto_us_1_axi_dwidth_converter_v2_1_20_top
       s_axi_arregion(3 downto 0) => B"0000",
       s_axi_arsize(2 downto 0) => B"000",
       s_axi_arvalid => '0',
-      s_axi_awaddr(31 downto 0) => s_axi_awaddr(31 downto 0),
+      s_axi_awaddr(63 downto 0) => s_axi_awaddr(63 downto 0),
       s_axi_awburst(1 downto 0) => s_axi_awburst(1 downto 0),
       s_axi_awcache(3 downto 0) => s_axi_awcache(3 downto 0),
       s_axi_awid(0) => '0',

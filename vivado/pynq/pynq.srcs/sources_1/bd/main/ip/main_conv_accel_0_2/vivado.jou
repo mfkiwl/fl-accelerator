@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Wed Feb 17 19:25:10 2021
+# Process ID: 23864
+# Current directory: C:/Users/peter/Desktop/Projects/FPGA/fl_accel/vivado/pynq/pynq.srcs/sources_1/bd/main/ip/main_conv_accel_0_2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent18260 C:\Users\peter\Desktop\Projects\FPGA\fl_accel\vivado\pynq\pynq.srcs\sources_1\bd\main\ip\main_conv_accel_0_2\main_conv_accel_0_2.dcp
+# Log file: C:/Users/peter/Desktop/Projects/FPGA/fl_accel/vivado/pynq/pynq.srcs/sources_1/bd/main/ip/main_conv_accel_0_2/vivado.log
+# Journal file: C:/Users/peter/Desktop/Projects/FPGA/fl_accel/vivado/pynq/pynq.srcs/sources_1/bd/main/ip/main_conv_accel_0_2\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_checkpoint C:/Users/peter/Desktop/Projects/FPGA/fl_accel/vivado/pynq/pynq.srcs/sources_1/bd/main/ip/main_conv_accel_0_2/main_conv_accel_0_2.dcp
+open_project C:/Users/peter/Desktop/Projects/FPGA/fl_accel/vivado/conv_accel/conv_accel.xpr
+update_compile_order -fileset sources_1

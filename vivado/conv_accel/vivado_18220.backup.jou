@@ -1,0 +1,36 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Fri Jul 10 21:37:17 2020
+# Process ID: 18220
+# Current directory: C:/Users/peter/Desktop/Projects/FPGA/vivado/conv_accel
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent20252 C:\Users\peter\Desktop\Projects\FPGA\vivado\conv_accel\conv_accel.xpr
+# Log file: C:/Users/peter/Desktop/Projects/FPGA/vivado/conv_accel/vivado.log
+# Journal file: C:/Users/peter/Desktop/Projects/FPGA/vivado/conv_accel\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/peter/Desktop/Projects/FPGA/vivado/conv_accel/conv_accel.xpr
+update_compile_order -fileset sources_1
+report_ip_status -name ip_status 
+upgrade_ip -srcset axis_vip_mst [get_ips  {axis_vip_mst axis_vip_slv mult}] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips {axis_vip_mst axis_vip_slv mult}] -no_script -sync -force -quiet
+update_compile_order -fileset sources_1
+report_ip_status -name ip_status 
+ipx::open_ipxact_file {C:\Users\peter\Desktop\Projects\FPGA\vivado\conv_accel\conv_accel.srcs\sources_1\component.xml}
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::unload_core c:/Users/peter/Desktop/Projects/FPGA/vivado/conv_accel/conv_accel.srcs/sources_1/component.xml
+generate_target all [get_files C:/Users/peter/Desktop/Projects/FPGA/vivado/conv_accel/conv_accel.srcs/sources_1/ip/mult/mult.xci]
+export_ip_user_files -of_objects [get_files C:/Users/peter/Desktop/Projects/FPGA/vivado/conv_accel/conv_accel.srcs/sources_1/ip/mult/mult.xci] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/peter/Desktop/Projects/FPGA/vivado/conv_accel/conv_accel.srcs/sources_1/ip/mult/mult.xci] -directory C:/Users/peter/Desktop/Projects/FPGA/vivado/conv_accel/conv_accel.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/peter/Desktop/Projects/FPGA/vivado/conv_accel/conv_accel.ip_user_files -ipstatic_source_dir C:/Users/peter/Desktop/Projects/FPGA/vivado/conv_accel/conv_accel.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/peter/Desktop/Projects/FPGA/vivado/conv_accel/conv_accel.cache/compile_simlib/modelsim} {questa=C:/Users/peter/Desktop/Projects/FPGA/vivado/conv_accel/conv_accel.cache/compile_simlib/questa} {riviera=C:/Users/peter/Desktop/Projects/FPGA/vivado/conv_accel/conv_accel.cache/compile_simlib/riviera} {activehdl=C:/Users/peter/Desktop/Projects/FPGA/vivado/conv_accel/conv_accel.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+create_fileset -blockset mult
+set_property top mult [get_fileset mult]
+move_files -fileset [get_fileset mult] [get_files -of_objects [get_fileset sources_1] C:/Users/peter/Desktop/Projects/FPGA/vivado/conv_accel/conv_accel.srcs/sources_1/ip/mult/mult.xci]
+launch_run mult_synth_1
+wait_on_run mult_synth_1
+
+launch_simulation
+open_wave_config C:/Users/peter/Desktop/Projects/FPGA/vivado/conv_accel/conv_accel.sim/wrapper_tb_behav.wcfg
+source wrapper_tb.tcl

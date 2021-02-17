@@ -1,0 +1,71 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sat Jul 11 13:41:39 2020
+# Process ID: 12736
+# Current directory: C:/Users/peter/Desktop/Projects/FPGA/vivado/conv_accel
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6720 C:\Users\peter\Desktop\Projects\FPGA\vivado\conv_accel\conv_accel.xpr
+# Log file: C:/Users/peter/Desktop/Projects/FPGA/vivado/conv_accel/vivado.log
+# Journal file: C:/Users/peter/Desktop/Projects/FPGA/vivado/conv_accel\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/peter/Desktop/Projects/FPGA/vivado/conv_accel/conv_accel.xpr
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+add_files -norecurse {C:/Users/peter/Desktop/Projects/FPGA/src/acclerator/output_ctrl.sv C:/Users/peter/Desktop/Projects/FPGA/src/acclerator/img_ctrl_tb.sv C:/Users/peter/Desktop/Projects/FPGA/src/acclerator/kernel_ctrl_tb.sv C:/Users/peter/Desktop/Projects/FPGA/src/acclerator/img_ctrl.sv C:/Users/peter/Desktop/Projects/FPGA/src/acclerator/kernel_ctrl.sv C:/Users/peter/Desktop/Projects/FPGA/src/acclerator/mult_block.sv C:/Users/peter/Desktop/Projects/FPGA/src/acclerator/wrapper_tb.sv C:/Users/peter/Desktop/Projects/FPGA/src/acclerator/utils.sv C:/Users/peter/Desktop/Projects/FPGA/src/acclerator/wrapper.sv C:/Users/peter/Desktop/Projects/FPGA/src/acclerator/wrapper_vip_tb.sv}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+move_files -fileset sim_1 [get_files  C:/Users/peter/Desktop/Projects/FPGA/src/acclerator/img_ctrl_tb.sv]
+move_files -fileset sim_1 [get_files  C:/Users/peter/Desktop/Projects/FPGA/src/acclerator/kernel_ctrl_tb.sv]
+move_files -fileset sim_1 [get_files  C:/Users/peter/Desktop/Projects/FPGA/src/acclerator/wrapper_tb.sv]
+generate_target all [get_files C:/Users/peter/Desktop/Projects/FPGA/vivado/conv_accel/conv_accel.srcs/sources_1/ip/axis_vip_slv/axis_vip_slv.xci]
+export_ip_user_files -of_objects [get_files C:/Users/peter/Desktop/Projects/FPGA/vivado/conv_accel/conv_accel.srcs/sources_1/ip/axis_vip_slv/axis_vip_slv.xci] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/peter/Desktop/Projects/FPGA/vivado/conv_accel/conv_accel.srcs/sources_1/ip/axis_vip_slv/axis_vip_slv.xci] -directory C:/Users/peter/Desktop/Projects/FPGA/vivado/conv_accel/conv_accel.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/peter/Desktop/Projects/FPGA/vivado/conv_accel/conv_accel.ip_user_files -ipstatic_source_dir C:/Users/peter/Desktop/Projects/FPGA/vivado/conv_accel/conv_accel.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/peter/Desktop/Projects/FPGA/vivado/conv_accel/conv_accel.cache/compile_simlib/modelsim} {questa=C:/Users/peter/Desktop/Projects/FPGA/vivado/conv_accel/conv_accel.cache/compile_simlib/questa} {riviera=C:/Users/peter/Desktop/Projects/FPGA/vivado/conv_accel/conv_accel.cache/compile_simlib/riviera} {activehdl=C:/Users/peter/Desktop/Projects/FPGA/vivado/conv_accel/conv_accel.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+create_fileset -blockset axis_vip_slv
+set_property top axis_vip_slv [get_fileset axis_vip_slv]
+move_files -fileset [get_fileset axis_vip_slv] [get_files -of_objects [get_fileset sources_1] C:/Users/peter/Desktop/Projects/FPGA/vivado/conv_accel/conv_accel.srcs/sources_1/ip/axis_vip_slv/axis_vip_slv.xci]
+generate_target all [get_files C:/Users/peter/Desktop/Projects/FPGA/vivado/conv_accel/conv_accel.srcs/sources_1/ip/axis_vip_mst/axis_vip_mst.xci]
+export_ip_user_files -of_objects [get_files C:/Users/peter/Desktop/Projects/FPGA/vivado/conv_accel/conv_accel.srcs/sources_1/ip/axis_vip_mst/axis_vip_mst.xci] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/peter/Desktop/Projects/FPGA/vivado/conv_accel/conv_accel.srcs/sources_1/ip/axis_vip_mst/axis_vip_mst.xci] -directory C:/Users/peter/Desktop/Projects/FPGA/vivado/conv_accel/conv_accel.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/peter/Desktop/Projects/FPGA/vivado/conv_accel/conv_accel.ip_user_files -ipstatic_source_dir C:/Users/peter/Desktop/Projects/FPGA/vivado/conv_accel/conv_accel.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/peter/Desktop/Projects/FPGA/vivado/conv_accel/conv_accel.cache/compile_simlib/modelsim} {questa=C:/Users/peter/Desktop/Projects/FPGA/vivado/conv_accel/conv_accel.cache/compile_simlib/questa} {riviera=C:/Users/peter/Desktop/Projects/FPGA/vivado/conv_accel/conv_accel.cache/compile_simlib/riviera} {activehdl=C:/Users/peter/Desktop/Projects/FPGA/vivado/conv_accel/conv_accel.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+create_fileset -blockset axis_vip_mst
+set_property top axis_vip_mst [get_fileset axis_vip_mst]
+move_files -fileset [get_fileset axis_vip_mst] [get_files -of_objects [get_fileset sources_1] C:/Users/peter/Desktop/Projects/FPGA/vivado/conv_accel/conv_accel.srcs/sources_1/ip/axis_vip_mst/axis_vip_mst.xci]
+launch_run {axis_vip_slv_synth_1 axis_vip_mst_synth_1}
+wait_on_run axis_vip_slv_synth_1
+
+wait_on_run axis_vip_slv_synth_1
+wait_on_run axis_vip_mst_synth_1
+
+launch_simulation
+export_ip_user_files -of_objects  [get_files C:/Users/peter/Desktop/Projects/FPGA/vivado/conv_accel/conv_accel.srcs/sources_1/imports/acclerator/img_ctrl.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/peter/Desktop/Projects/FPGA/vivado/conv_accel/conv_accel.srcs/sources_1/imports/acclerator/kernel_ctrl.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/peter/Desktop/Projects/FPGA/vivado/conv_accel/conv_accel.srcs/sources_1/imports/acclerator/mult_block.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/peter/Desktop/Projects/FPGA/vivado/conv_accel/conv_accel.srcs/sources_1/imports/acclerator/output_ctrl.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/peter/Desktop/Projects/FPGA/vivado/conv_accel/conv_accel.srcs/sources_1/imports/acclerator/utils.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/peter/Desktop/Projects/FPGA/vivado/conv_accel/conv_accel.srcs/sources_1/imports/acclerator/wrapper.sv] -no_script -reset -force -quiet
+remove_files  {C:/Users/peter/Desktop/Projects/FPGA/vivado/conv_accel/conv_accel.srcs/sources_1/imports/acclerator/img_ctrl.sv C:/Users/peter/Desktop/Projects/FPGA/vivado/conv_accel/conv_accel.srcs/sources_1/imports/acclerator/kernel_ctrl.sv C:/Users/peter/Desktop/Projects/FPGA/vivado/conv_accel/conv_accel.srcs/sources_1/imports/acclerator/mult_block.sv C:/Users/peter/Desktop/Projects/FPGA/vivado/conv_accel/conv_accel.srcs/sources_1/imports/acclerator/output_ctrl.sv C:/Users/peter/Desktop/Projects/FPGA/vivado/conv_accel/conv_accel.srcs/sources_1/imports/acclerator/utils.sv C:/Users/peter/Desktop/Projects/FPGA/vivado/conv_accel/conv_accel.srcs/sources_1/imports/acclerator/wrapper.sv}
+export_ip_user_files -of_objects  [get_files C:/Users/peter/Desktop/Projects/FPGA/vivado/conv_accel/conv_accel.srcs/sim_1/imports/acclerator/wrapper_tb.sv] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 C:/Users/peter/Desktop/Projects/FPGA/vivado/conv_accel/conv_accel.srcs/sim_1/imports/acclerator/wrapper_tb.sv
+export_ip_user_files -of_objects  [get_files C:/Users/peter/Desktop/Projects/FPGA/src/acclerator/wrapper_vip_tb.sv] -no_script -reset -force -quiet
+remove_files  C:/Users/peter/Desktop/Projects/FPGA/src/acclerator/wrapper_vip_tb.sv
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top kernel_ctrl_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top wrapper_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+open_wave_config C:/Users/peter/Desktop/Projects/FPGA/vivado/conv_accel/conv_accel.sim/wrapper_tb_behav.wcfg
+source wrapper_tb.tcl
+close_sim

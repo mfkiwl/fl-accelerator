@@ -1,0 +1,26 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sat Jul 11 10:51:57 2020
+# Process ID: 16004
+# Current directory: C:/Users/peter/Desktop/Projects/FPGA/vivado/conv_accel
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15920 C:\Users\peter\Desktop\Projects\FPGA\vivado\conv_accel\conv_accel.xpr
+# Log file: C:/Users/peter/Desktop/Projects/FPGA/vivado/conv_accel/vivado.log
+# Journal file: C:/Users/peter/Desktop/Projects/FPGA/vivado/conv_accel\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/peter/Desktop/Projects/FPGA/vivado/conv_accel/conv_accel.xpr
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-3] Board Part Repository Path: Could not find the directory 'C:/Users/peter/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.1/data/ip'.
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat Jul 11 13:41:12 2020...
